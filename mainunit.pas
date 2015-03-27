@@ -7,8 +7,10 @@ interface
 uses
   Classes, SysUtils, FileUtil, TADbSource, TAGraph, LR_Desgn, LR_Class,
   LR_DBSet, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls, Buttons,
-  Menus, fpspreadsheet, xlsbiff8, laz_fpspreadsheet, fpspreadsheetgrid,
-  fpspreadsheetctrls, rxdbgrid, dataunit, db, urenunit;
+  Menus, fpspreadsheet, xlsbiff8, xlsbiff5, laz_fpspreadsheet, fpspreadsheetgrid,
+  fpspreadsheetctrls, rxdbgrid, dataunit, db, urenunit,fpsallformats,fpstypes;
+
+
 
 type
 
@@ -396,8 +398,8 @@ begin
    if dm.Zdaginfonieuw.Params.Count = 1 then
    dm.Zdaginfonieuw.ParamByName('JAARWEEK').AsInteger:= dm.ZJAARWEEK.FieldByName('JAARWEEK').AsInteger;
    dm.zdaginfonieuw.Active:= true;
-  // weekinfo.LoadFromFile(Instellingenunit.FormInstellingen.EditDagInfoRapport.Text);
-   weekinfo.LoadFromFile('C:\Users\chrgra\Documents\Projecten\ODN\reports\daginfo_nieuw.lrf');
+   weekinfo.LoadFromFile(Instellingenunit.FormInstellingen.EditDagInfoRapport.Text);
+  // weekinfo.LoadFromFile('C:\Users\chrgra\Documents\Projecten\ODN\reports\daginfo_nieuw.lrf');
 
    Weekinfo.ShowReport;
 
@@ -410,7 +412,8 @@ begin
    if dm.Zweekinfonieuw.Params.Count = 1 then
    dm.Zweekinfonieuw.ParamByName('JAARWEEK').AsInteger:= dm.ZJAARWEEK.FieldByName('JAARWEEK').AsInteger;
    dm.zweekinfonieuw.Active:= true;
-   weekinfo.LoadFromFile('C:\Users\chrgra\Documents\Projecten\ODN\reports\weekinfo4.lrf');
+   weekinfo.LoadFromFile(Instellingenunit.FormInstellingen.EditWeekInfoRapport.text);
+  // weekinfo.LoadFromFile('C:\Users\chrgra\Documents\Projecten\ODN\reports\weekinfo4.lrf');
    Weekinfo.ShowReport;
 end;
 

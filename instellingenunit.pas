@@ -34,6 +34,7 @@ type
     Panel1: TPanel;
     Panel2: TPanel;
     procedure Button1Click(Sender: TObject);
+    procedure EditWeekInfoRapportChange(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -56,6 +57,11 @@ implementation
 procedure TFormInstellingen.Button1Click(Sender: TObject);
 begin
   close;
+end;
+
+procedure TFormInstellingen.EditWeekInfoRapportChange(Sender: TObject);
+begin
+
 end;
 
 procedure TFormInstellingen.FormClose(Sender: TObject;

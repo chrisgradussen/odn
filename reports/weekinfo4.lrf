@@ -7,7 +7,7 @@
     <KeyWords Value=""/>
     <Comments Value=""/>
     <ReportCreateDate Value="2014-03-13 22:30:55"/>
-    <ReportLastChange Value="2014-03-18 00:58:08"/>
+    <ReportLastChange Value="2015-03-27 23:35:12"/>
     <ReportVersionBuild Value=""/>
     <ReportVersionMajor Value=""/>
     <ReportVersionMinor Value=""/>
@@ -17,14 +17,14 @@
     <Pages>
       <PrintToDefault Value="False"/>
       <DoublePass Value="True"/>
-      <SelectedPrinter Value="E-MANAGERKANTOOR01"/>
+      <SelectedPrinter Value="Default printer"/>
       <PageCount Value="2"/>
       <Page1>
         <Name Value="Page1"/>
         <ClassName Value="TfrPageReport"/>
         <Visible Value="True"/>
-        <Width Value="842"/>
-        <Height Value="595"/>
+        <Width Value="2970"/>
+        <Height Value="2100"/>
         <Script Value=""/>
         <PgSize Value="9"/>
         <Margins>
@@ -151,7 +151,7 @@
           <Data>
             <Format Value="556"/>
             <FormatStr Value=""/>
-            <Memo Value="OMZET EN DERVING WEEK :[DatasourceJaarweek.&quot;JAARWEEK&quot;]&#xD;&#xA;"/>
+            <Memo Value="OMZET EN DERVING WEEK :[DatasourceJaarweek.&quot;JAARWEEK&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -197,7 +197,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;OMZETGROEP&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;OMZETGROEP&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -243,7 +243,7 @@
           <Data>
             <Format Value="17039404"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;NORMOMZET&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;NORMOMZET&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -289,8 +289,8 @@
           <Data>
             <Format Value="17039404"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;WEEKOMZET&quot;]&#xD;&#xA;"/>
-            <Script Value="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;WEEKOMZET&quot;]&#xA;"/>
+            <Script Value="&#xA;&#xA;&#xA;"/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
@@ -335,7 +335,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;WEEKOMZETVORIGJAAR&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;WEEKOMZETVORIGJAAR&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -381,7 +381,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZET&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZET&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -427,7 +427,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZETVORIGJAAR&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZETVORIGJAAR&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -473,7 +473,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;JAAROMZET&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;JAAROMZET&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -519,7 +519,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;JAAROMZETVORIGJAAR&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;JAAROMZETVORIGJAAR&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -565,7 +565,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;HELEJAAROMZET&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;HELEJAAROMZET&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -611,7 +611,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;HELEJAAROMZETVORIGJAAR&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;HELEJAAROMZETVORIGJAAR&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -657,7 +657,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekInfoNieuw.&quot;HELEJAAROMZETVORIGJAAR&quot;]/[sum([DatasourceWeekInfoNieuw.&quot;HELEJAAROMZETVORIGJAAR&quot;])]*100]&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekInfoNieuw.&quot;HELEJAAROMZETVORIGJAAR&quot;]/[sum([DatasourceWeekInfoNieuw.&quot;HELEJAAROMZETVORIGJAAR&quot;])]*100]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -703,7 +703,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekInfoNieuw.&quot;JAAROMZETVORIGJAAR&quot;]/[sum([DatasourceWeekInfoNieuw.&quot;JAAROMZETVORIGJAAR&quot;])]*100]&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekInfoNieuw.&quot;JAAROMZETVORIGJAAR&quot;]/[sum([DatasourceWeekInfoNieuw.&quot;JAAROMZETVORIGJAAR&quot;])]*100]&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -749,7 +749,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekInfoNieuw.&quot;JAAROMZET&quot;]/[sum([DatasourceWeekInfoNieuw.&quot;JAAROMZET&quot;])]*100]&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekInfoNieuw.&quot;JAAROMZET&quot;]/[sum([DatasourceWeekInfoNieuw.&quot;JAAROMZET&quot;])]*100]&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -795,7 +795,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekInfoNieuw.&quot;VIERWEKENOMZETVORIGJAAR&quot;]/[sum([DatasourceWeekInfoNieuw.&quot;VIERWEKENOMZETVORIGJAAR&quot;])]*100]&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekInfoNieuw.&quot;VIERWEKENOMZETVORIGJAAR&quot;]/[sum([DatasourceWeekInfoNieuw.&quot;VIERWEKENOMZETVORIGJAAR&quot;])]*100]&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -841,7 +841,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekInfoNieuw.&quot;VIERWEKENOMZET&quot;]/[sum([DatasourceWeekInfoNieuw.&quot;VIERWEKENOMZET&quot;])]*100]&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekInfoNieuw.&quot;VIERWEKENOMZET&quot;]/[sum([DatasourceWeekInfoNieuw.&quot;VIERWEKENOMZET&quot;])]*100]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -887,7 +887,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekInfoNieuw.&quot;WEEKOMZETVORIGJAAR&quot;]/[sum([DatasourceWeekInfoNieuw.&quot;WEEKOMZETVORIGJAAR&quot;])]*100]&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekInfoNieuw.&quot;WEEKOMZETVORIGJAAR&quot;]/[sum([DatasourceWeekInfoNieuw.&quot;WEEKOMZETVORIGJAAR&quot;])]*100]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -933,7 +933,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekInfoNieuw.&quot;WEEKOMZET&quot;]/[sum([DatasourceWeekInfoNieuw.&quot;WEEKOMZET&quot;])]*100]&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekInfoNieuw.&quot;WEEKOMZET&quot;]/[sum([DatasourceWeekInfoNieuw.&quot;WEEKOMZET&quot;])]*100]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -979,7 +979,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;NORMOMZET&quot;]/[sum([DatasourceWeekinfoNieuw.&quot;NORMOMZET&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;NORMOMZET&quot;]/[sum([DatasourceWeekinfoNieuw.&quot;NORMOMZET&quot;])]*100]&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -1025,7 +1025,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekInfoNieuw.&quot;HELEJAAROMZET&quot;]/[sum([DatasourceWeekInfoNieuw.&quot;HELEJAAROMZET&quot;])]*100]&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekInfoNieuw.&quot;HELEJAAROMZET&quot;]/[sum([DatasourceWeekInfoNieuw.&quot;HELEJAAROMZET&quot;])]*100]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -1071,7 +1071,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="TOTAAL&#xD;&#xA;"/>
+            <Memo Value="TOTAAL&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -1117,14 +1117,14 @@
           <Data>
             <Format Value="17039404"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[SUM([DatasourceWeekinfoNieuw.&quot;NORMOMZET&quot;],DetailData2)]&#xD;&#xA;"/>
+            <Memo Value="[SUM([DatasourceWeekinfoNieuw.&quot;NORMOMZET&quot;],DetailData2)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -1163,14 +1163,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;WEEKOMZET&quot;])]&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;WEEKOMZET&quot;])]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -1209,14 +1209,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[SUM([DatasourceWeekinfoNieuw.&quot;WEEKOMZETVORIGJAAR&quot;],DetailData2)]&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[SUM([DatasourceWeekinfoNieuw.&quot;WEEKOMZETVORIGJAAR&quot;],DetailData2)]&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -1255,14 +1255,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[SUM([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZET&quot;],DetailData2)]&#xD;&#xA;"/>
+            <Memo Value="[SUM([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZET&quot;],DetailData2)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -1301,14 +1301,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[SUM([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZETVORIGJAAR&quot;],DetailData2)]&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[SUM([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZETVORIGJAAR&quot;],DetailData2)]&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -1347,14 +1347,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;JAAROMZET&quot;)]&#xD;&#xA;"/>
+            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;JAAROMZET&quot;)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -1393,14 +1393,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[SUM([DatasourceWeekinfoNieuw.&quot;JAAROMZETVORIGJAAR&quot;],DetailData2)]&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[SUM([DatasourceWeekinfoNieuw.&quot;JAAROMZETVORIGJAAR&quot;],DetailData2)]&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -1439,14 +1439,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[SUM([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZET&quot;],DetailData2)]&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[SUM([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZET&quot;],DetailData2)]&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -1485,14 +1485,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[SUM([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZETVORIGJAAR&quot;],DetailData2)]&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[SUM([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZETVORIGJAAR&quot;],DetailData2)]&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -1531,7 +1531,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZETVORIGJAAR&quot;],DetailData2)/SUM([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZETVORIGJAAR&quot;])*100]&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZETVORIGJAAR&quot;],DetailData2)/SUM([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZETVORIGJAAR&quot;])*100]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -1577,7 +1577,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;JAAROMZETVORIGJAAR&quot;],DetailData2)/SUM([DatasourceWeekinfoNieuw.&quot;JAAROMZETVORIGJAAR&quot;])*100]&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;JAAROMZETVORIGJAAR&quot;],DetailData2)/SUM([DatasourceWeekinfoNieuw.&quot;JAAROMZETVORIGJAAR&quot;])*100]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -1623,7 +1623,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;JAAROMZET&quot;],DetailData2)/SUM([DatasourceWeekinfoNieuw.&quot;JAAROMZET&quot;])*100]&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;JAAROMZET&quot;],DetailData2)/SUM([DatasourceWeekinfoNieuw.&quot;JAAROMZET&quot;])*100]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -1669,7 +1669,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZETVORIGJAAR&quot;],DetailData2)/SUM([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZETVORIGJAAR&quot;])*100]&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZETVORIGJAAR&quot;],DetailData2)/SUM([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZETVORIGJAAR&quot;])*100]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -1715,7 +1715,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZET&quot;],DetailData2)/SUM([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZET&quot;])*100]&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZET&quot;],DetailData2)/SUM([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZET&quot;])*100]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -1761,7 +1761,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;WEEKOMZETVORIGJAAR&quot;],DetailData2)/SUM([DatasourceWeekinfoNieuw.&quot;WEEKOMZETVORIGJAAR&quot;])*100]&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;WEEKOMZETVORIGJAAR&quot;],DetailData2)/SUM([DatasourceWeekinfoNieuw.&quot;WEEKOMZETVORIGJAAR&quot;])*100]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -1807,7 +1807,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;WEEKOMZET&quot;])/SUM([DatasourceWeekinfoNieuw.&quot;WEEKOMZET&quot;])*100]&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;WEEKOMZET&quot;])/SUM([DatasourceWeekinfoNieuw.&quot;WEEKOMZET&quot;])*100]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -1853,7 +1853,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;NORMOMZET&quot;],DetailData2)/SUM([DatasourceWeekinfoNieuw.&quot;NORMOMZET&quot;])*100]&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;NORMOMZET&quot;],DetailData2)/SUM([DatasourceWeekinfoNieuw.&quot;NORMOMZET&quot;])*100]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -1899,7 +1899,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZET&quot;],DetailData2)/SUM([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZET&quot;])*100]&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZET&quot;],DetailData2)/SUM([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZET&quot;])*100]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -1962,7 +1962,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#0"/>
-            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100)]&#xD;&#xA;"/>
+            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2008,7 +2008,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#0"/>
-            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100-1)]&#xD;&#xA;"/>
+            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100-1)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2054,7 +2054,7 @@
           <Data>
             <Format Value="17039404"/>
             <FormatStr Value="####"/>
-            <Memo Value="WEEK 1 - 52&#xD;&#xA;"/>
+            <Memo Value="WEEK 1 - 52&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2100,7 +2100,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#0"/>
-            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100)]&#xD;&#xA;"/>
+            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2146,7 +2146,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#0"/>
-            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100-1)]&#xD;&#xA;"/>
+            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100-1)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2192,7 +2192,7 @@
           <Data>
             <Format Value="17039404"/>
             <FormatStr Value="####"/>
-            <Memo Value="WEEK  1 - [FORMATFLOAT(['#0'], [DatasourceJaarweek.&quot;JAARWEEK&quot;] mod 100)]&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="WEEK  1 - [FORMATFLOAT(['#0'], [DatasourceJaarweek.&quot;JAARWEEK&quot;] mod 100)]&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2238,7 +2238,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#0"/>
-            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100)]&#xD;&#xA;"/>
+            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2284,7 +2284,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#0"/>
-            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100-1)]&#xD;&#xA;"/>
+            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100-1)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2330,7 +2330,7 @@
           <Data>
             <Format Value="17039404"/>
             <FormatStr Value="####"/>
-            <Memo Value="WEEK  [FORMATFLOAT(['#0'], ([DatasourceJaarweek.&quot;JAARWEEK&quot;] mod 100)-3)] - [FORMATFLOAT(['#0'], [DatasourceJaarweek.&quot;JAARWEEK&quot;] mod 100)]&#xD;&#xA;"/>
+            <Memo Value="WEEK  [FORMATFLOAT(['#0'], ([DatasourceJaarweek.&quot;JAARWEEK&quot;] mod 100)-3)] - [FORMATFLOAT(['#0'], [DatasourceJaarweek.&quot;JAARWEEK&quot;] mod 100)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2376,7 +2376,7 @@
           <Data>
             <Format Value="556"/>
             <FormatStr Value=""/>
-            <Memo Value="NORM&#xD;&#xA;"/>
+            <Memo Value="NORM&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2422,7 +2422,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#0"/>
-            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100)]&#xD;&#xA;"/>
+            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2468,7 +2468,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#0"/>
-            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100-1)]&#xD;&#xA;"/>
+            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100-1)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2514,7 +2514,7 @@
           <Data>
             <Format Value="17039404"/>
             <FormatStr Value="####"/>
-            <Memo Value="WEEK [FORMATFLOAT(['#0'], [DatasourceJaarweek.&quot;JAARWEEK&quot;] mod 100)]&#xD;&#xA;"/>
+            <Memo Value="WEEK [FORMATFLOAT(['#0'], [DatasourceJaarweek.&quot;JAARWEEK&quot;] mod 100)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2542,8 +2542,8 @@
         <Name Value="Page3"/>
         <ClassName Value="TfrPageReport"/>
         <Visible Value="True"/>
-        <Width Value="842"/>
-        <Height Value="595"/>
+        <Width Value="2970"/>
+        <Height Value="2100"/>
         <Script Value=""/>
         <PgSize Value="9"/>
         <Margins>
@@ -2648,7 +2648,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;NORMWEEKDERVING&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;NORMWEEKDERVING&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2694,7 +2694,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;WEEKDERVING&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;WEEKDERVING&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2740,7 +2740,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;WEEKDERVINGVORIGJAAR&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;WEEKDERVINGVORIGJAAR&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2786,7 +2786,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;NORMVIERWEKENDERVING&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;NORMVIERWEKENDERVING&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2832,7 +2832,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;VIERWEKENDERVING&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;VIERWEKENDERVING&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2878,7 +2878,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;VIERWEKENDERVINGVORIGJAAR&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;VIERWEKENDERVINGVORIGJAAR&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2924,7 +2924,7 @@
           <Data>
             <Format Value="17039404"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;NORMJAARDERVING&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;NORMJAARDERVING&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -2970,7 +2970,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;JAARDERVING&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;JAARDERVING&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3016,7 +3016,7 @@
           <Data>
             <Format Value="556"/>
             <FormatStr Value=""/>
-            <Memo Value="NORM&#xD;&#xA;"/>
+            <Memo Value="NORM&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3062,7 +3062,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;JAARDERVINGVORIGJAAR&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;JAARDERVINGVORIGJAAR&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3108,7 +3108,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#0"/>
-            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100)]&#xD;&#xA;"/>
+            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3154,7 +3154,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;NORMHELEJAARDERVING&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;NORMHELEJAARDERVING&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3200,7 +3200,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#0"/>
-            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100-1)]&#xD;&#xA;"/>
+            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100-1)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3246,7 +3246,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;HELEJAARDERVING&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;HELEJAARDERVING&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3292,7 +3292,7 @@
           <Data>
             <Format Value="17039404"/>
             <FormatStr Value="####"/>
-            <Memo Value="WEEK 1 - 52&#xD;&#xA;"/>
+            <Memo Value="WEEK 1 - 52&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3338,7 +3338,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[DatasourceWeekinfoNieuw.&quot;HELEJAARDERVINGVORIGJAAR&quot;]&#xD;&#xA;"/>
+            <Memo Value="[DatasourceWeekinfoNieuw.&quot;HELEJAARDERVINGVORIGJAAR&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3384,7 +3384,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;NORMVIERWEKENDERVING&quot;]/[([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZET&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;NORMVIERWEKENDERVING&quot;]/[([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZET&quot;])]*100]&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3430,7 +3430,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;VIERWEKENDERVING&quot;]/[([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZET&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;VIERWEKENDERVING&quot;]/[([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZET&quot;])]*100]&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3476,7 +3476,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;VIERWEKENDERVINGVORIGJAAR&quot;]/[([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZETVORIGJAAR&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;VIERWEKENDERVINGVORIGJAAR&quot;]/[([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZETVORIGJAAR&quot;])]*100]&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3522,7 +3522,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;NORMJAARDERVING&quot;]/[([DatasourceWeekinfoNieuw.&quot;JAAROMZET&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;NORMJAARDERVING&quot;]/[([DatasourceWeekinfoNieuw.&quot;JAAROMZET&quot;])]*100]&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3568,7 +3568,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;JAARDERVING&quot;]/[([DatasourceWeekinfoNieuw.&quot;JAAROMZET&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;JAARDERVING&quot;]/[([DatasourceWeekinfoNieuw.&quot;JAAROMZET&quot;])]*100]&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3614,7 +3614,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;JAARDERVINGVORIGJAAR&quot;]/[([DatasourceWeekinfoNieuw.&quot;JAAROMZETVORIGJAAR&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;JAARDERVINGVORIGJAAR&quot;]/[([DatasourceWeekinfoNieuw.&quot;JAAROMZETVORIGJAAR&quot;])]*100]&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3660,7 +3660,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;NORMHELEJAARDERVING&quot;]/[([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZET&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;NORMHELEJAARDERVING&quot;]/[([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZET&quot;])]*100]&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3706,7 +3706,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;HELEJAARDERVING&quot;]/[([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZET&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;HELEJAARDERVING&quot;]/[([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZET&quot;])]*100]&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3752,7 +3752,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;HELEJAARDERVINGVORIGJAAR&quot;]/[([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZETVORIGJAAR&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;HELEJAARDERVINGVORIGJAAR&quot;]/[([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZETVORIGJAAR&quot;])]*100]&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3798,7 +3798,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;NORMWEEKDERVING&quot;]/[([DatasourceWeekinfoNieuw.&quot;WEEKOMZET&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;NORMWEEKDERVING&quot;]/[([DatasourceWeekinfoNieuw.&quot;WEEKOMZET&quot;])]*100]&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3844,7 +3844,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;WEEKDERVING&quot;]/[([DatasourceWeekinfoNieuw.&quot;WEEKOMZET&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;WEEKDERVING&quot;]/[([DatasourceWeekinfoNieuw.&quot;WEEKOMZET&quot;])]*100]&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3890,7 +3890,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;WEEKDERVINGVORIGJAAR&quot;]/[([DatasourceWeekinfoNieuw.&quot;WEEKOMZETVORIGJAAR&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[[DatasourceWeekinfoNieuw.&quot;WEEKDERVINGVORIGJAAR&quot;]/[([DatasourceWeekinfoNieuw.&quot;WEEKOMZETVORIGJAAR&quot;])]*100]&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3936,7 +3936,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[datasourceWeekinfoNieuw.&quot;omzetgroep&quot;]&#xD;&#xA;"/>
+            <Memo Value="[datasourceWeekinfoNieuw.&quot;omzetgroep&quot;]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -3982,14 +3982,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;NORMWEEKDERVING&quot;)]&#xD;&#xA;"/>
+            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;NORMWEEKDERVING&quot;)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -4028,14 +4028,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;WEEKDERVING&quot;])]&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;WEEKDERVING&quot;])]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -4074,14 +4074,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;WEEKDERVINGVORIGJAAR&quot;])]&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;WEEKDERVINGVORIGJAAR&quot;])]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -4120,14 +4120,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;NORMVIERWEKENDERVING&quot;)]&#xD;&#xA;"/>
+            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;NORMVIERWEKENDERVING&quot;)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -4166,14 +4166,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;VIERWEKENDERVING&quot;)]&#xD;&#xA;"/>
+            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;VIERWEKENDERVING&quot;)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -4212,14 +4212,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;VIERWEKENDERVINGVORIGJAAR&quot;)]&#xD;&#xA;"/>
+            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;VIERWEKENDERVINGVORIGJAAR&quot;)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -4258,14 +4258,14 @@
           <Data>
             <Format Value="17039404"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;NORMJAARDERVING&quot;)]&#xD;&#xA;"/>
+            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;NORMJAARDERVING&quot;)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -4304,14 +4304,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;JAARDERVING&quot;)]&#xD;&#xA;"/>
+            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;JAARDERVING&quot;)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -4350,14 +4350,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;JAARDERVINGVORIGJAAR&quot;)]&#xD;&#xA;"/>
+            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;JAARDERVINGVORIGJAAR&quot;)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -4396,14 +4396,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;NORMHELEJAARDERVING&quot;)]&#xD;&#xA;"/>
+            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;NORMHELEJAARDERVING&quot;)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -4442,14 +4442,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;HELEJAARDERVING&quot;)]&#xD;&#xA;"/>
+            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;HELEJAARDERVING&quot;)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -4488,14 +4488,14 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;HELEJAARDERVINGVORIGJAAR&quot;)]&#xD;&#xA;"/>
+            <Memo Value="[sum(DatasourceWeekinfoNieuw.&quot;HELEJAARDERVINGVORIGJAAR&quot;)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
           <FURLInfo Value=""/>
           <Font>
             <Name Value="helvetica [urw]"/>
-            <Size Value="10"/>
+            <Size Value="9"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
             <Style Value="fsBold"/>
@@ -4534,7 +4534,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;NORMVIERWEKENDERVING&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZET&quot;])]*100]&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;NORMVIERWEKENDERVING&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZET&quot;])]*100]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -4580,7 +4580,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;VIERWEKENDERVING&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZET&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;VIERWEKENDERVING&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZET&quot;])]*100]&#xA;&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -4626,7 +4626,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;VIERWEKENDERVINGVORIGJAAR&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZETVORIGJAAR&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;VIERWEKENDERVINGVORIGJAAR&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;VIERWEKENOMZETVORIGJAAR&quot;])]*100]&#xA;&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -4672,7 +4672,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;NORMJAARDERVING&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;JAAROMZET&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;NORMJAARDERVING&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;JAAROMZET&quot;])]*100]&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -4718,7 +4718,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;JAARDERVING&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;JAAROMZET&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;JAARDERVING&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;JAAROMZET&quot;])]*100]&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -4764,7 +4764,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;JAARDERVINGVORIGJAAR&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;JAAROMZETVORIGJAAR&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;JAARDERVINGVORIGJAAR&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;JAAROMZETVORIGJAAR&quot;])]*100]&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -4810,7 +4810,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;NORMHELEJAARDERVING&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZET&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;NORMHELEJAARDERVING&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZET&quot;])]*100]&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -4856,7 +4856,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;HELEJAARDERVING&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZET&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;HELEJAARDERVING&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZET&quot;])]*100]&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -4902,7 +4902,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;HELEJAARDERVINGVORIGJAAR&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZETVORIGJAAR&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;HELEJAARDERVINGVORIGJAAR&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;HELEJAAROMZETVORIGJAAR&quot;])]*100]&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -4948,7 +4948,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;NORMWEEKDERVING&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;WEEKOMZET&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;NORMWEEKDERVING&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;WEEKOMZET&quot;])]*100]&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -4994,7 +4994,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;WEEKDERVING&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;WEEKOMZET&quot;])]*100]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;WEEKDERVING&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;WEEKOMZET&quot;])]*100]&#xA;&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -5040,7 +5040,7 @@
           <Data>
             <Format Value="17039662"/>
             <FormatStr Value="#0.0"/>
-            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;WEEKDERVINGVORIGJAAR&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;WEEKOMZETVORIGJAAR&quot;])]*100]&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="[sum([DatasourceWeekinfoNieuw.&quot;WEEKDERVINGVORIGJAAR&quot;])/[sum([DatasourceWeekinfoNieuw.&quot;WEEKOMZETVORIGJAAR&quot;])]*100]&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -5086,7 +5086,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#,##0"/>
-            <Memo Value="TOTAAL&#xD;&#xA;"/>
+            <Memo Value="TOTAAL&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -5132,7 +5132,7 @@
           <Data>
             <Format Value="556"/>
             <FormatStr Value=""/>
-            <Memo Value="NORM&#xD;&#xA;"/>
+            <Memo Value="NORM&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -5178,7 +5178,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#0"/>
-            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100)]&#xD;&#xA;"/>
+            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -5224,7 +5224,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#0"/>
-            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100-1)]&#xD;&#xA;"/>
+            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100-1)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -5270,7 +5270,7 @@
           <Data>
             <Format Value="17039404"/>
             <FormatStr Value="####"/>
-            <Memo Value="WEEK  1 - [FORMATFLOAT(['#0'], [DatasourceJaarweek.&quot;JAARWEEK&quot;] mod 100)]&#xD;&#xA;&#xD;&#xA;"/>
+            <Memo Value="WEEK  1 - [FORMATFLOAT(['#0'], [DatasourceJaarweek.&quot;JAARWEEK&quot;] mod 100)]&#xA;&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -5316,7 +5316,7 @@
           <Data>
             <Format Value="556"/>
             <FormatStr Value=""/>
-            <Memo Value="NORM&#xD;&#xA;"/>
+            <Memo Value="NORM&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -5362,7 +5362,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#0"/>
-            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100)]&#xD;&#xA;"/>
+            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -5408,7 +5408,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#0"/>
-            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100-1)]&#xD;&#xA;"/>
+            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100-1)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -5454,7 +5454,7 @@
           <Data>
             <Format Value="17039404"/>
             <FormatStr Value="####"/>
-            <Memo Value="WEEK  [FORMATFLOAT(['#0'], ([DatasourceJaarweek.&quot;JAARWEEK&quot;] mod 100)-3)] - [FORMATFLOAT(['#0'], [DatasourceJaarweek.&quot;JAARWEEK&quot;] mod 100)]&#xD;&#xA;"/>
+            <Memo Value="WEEK  [FORMATFLOAT(['#0'], ([DatasourceJaarweek.&quot;JAARWEEK&quot;] mod 100)-3)] - [FORMATFLOAT(['#0'], [DatasourceJaarweek.&quot;JAARWEEK&quot;] mod 100)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -5500,7 +5500,7 @@
           <Data>
             <Format Value="556"/>
             <FormatStr Value=""/>
-            <Memo Value="NORM&#xD;&#xA;"/>
+            <Memo Value="NORM&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -5546,7 +5546,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#0"/>
-            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100)]&#xD;&#xA;"/>
+            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -5592,7 +5592,7 @@
           <Data>
             <Format Value="17039916"/>
             <FormatStr Value="#0"/>
-            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100-1)]&#xD;&#xA;"/>
+            <Memo Value="[int([DatasourceJaarweek.&quot;JAARWEEK&quot;]/100-1)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -5638,7 +5638,7 @@
           <Data>
             <Format Value="17039404"/>
             <FormatStr Value="####"/>
-            <Memo Value="WEEK [FORMATFLOAT(['#0'], [DatasourceJaarweek.&quot;JAARWEEK&quot;] mod 100)]&#xD;&#xA;"/>
+            <Memo Value="WEEK [FORMATFLOAT(['#0'], [DatasourceJaarweek.&quot;JAARWEEK&quot;] mod 100)]&#xA;"/>
             <Script Value=""/>
           </Data>
           <Tag Value=""/>
@@ -5665,7 +5665,7 @@
       <FVal>
         <Count Value="0"/>
       </FVal>
-      <ParentVars Value="&#xD;&#xA;&#xD;&#xA;"/>
+      <ParentVars Value="&#xA;&#xA;"/>
     </Pages>
   </LazReport>
 </CONFIG>
