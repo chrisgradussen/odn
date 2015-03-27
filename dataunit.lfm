@@ -1,0 +1,390 @@
+object DM: TDM
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 690
+  HorizontalOffset = 814
+  VerticalOffset = 0
+  Width = 288
+  object ZConnection: TZConnection
+    ControlsCodePage = cCP_UTF8
+    Properties.Strings = (
+      'AutoEncodeStrings='
+    )
+    AutoCommit = False
+    TransactIsolationLevel = tiReadCommitted
+    Connected = True
+    DesignConnection = True
+    BeforeConnect = ZConnectionBeforeConnect
+    HostName = 'localhost'
+    Port = 0
+    Database = 'C:\Users\chrgra\Documents\Projecten\ODN\ODN.FDB'
+    User = 'sysdba'
+    Password = 'masterkey'
+    Protocol = 'firebird-2.5'
+    left = 52
+    top = 8
+  end
+  object ZWeekinfo: TZQuery
+    Connection = ZConnection
+    SQL.Strings = (
+      'select * from weekinfo(:jaarweek);'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'jaarweek'
+        ParamType = ptUnknown
+      end>
+    left = 200
+    top = 8
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'jaarweek'
+        ParamType = ptUnknown
+      end>
+  end
+  object ZOmzetgegevensAdd: TZSQLProcessor
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'wag_id'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'datum'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'waarde'
+        ParamType = ptUnknown
+      end>
+    Script.Strings = (
+      'execute procedure omzetgegevens_update(:wag_id,:datum,:waarde)'
+    )
+    Connection = ZConnection
+    Delimiter = ';'
+    left = 52
+    top = 69
+  end
+  object ZAfdeling: TZQuery
+    Connection = ZConnection
+    SQL.Strings = (
+      'select * from afdeling'
+    )
+    Params = <>
+    left = 200
+    top = 69
+  end
+  object ZJaarweek: TZQuery
+    Connection = ZConnection
+    SQL.Strings = (
+      'select f_datetoyearweek(o.datum) as JAARWEEK from omzetgegevens o group by f_datetoyearweek(o.datum) order by f_datetoyearweek(o.datum)desc'
+    )
+    Params = <>
+    left = 200
+    top = 128
+  end
+  object ZVoorraadcorrectiesAdd: TZSQLProcessor
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'omzetgroep'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'soort'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'artikelnummer'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'omschrijving'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'aantal'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'waarde'
+        ParamType = ptUnknown
+      end>
+    Script.Strings = (
+      'execute procedure voorraadcorrecties_update(:omzetgroep,:soort,:artikelnummer,:omschrijving,:aantal,:waarde)'
+    )
+    Connection = ZConnection
+    Delimiter = ';'
+    left = 52
+    top = 128
+  end
+  object ZvoorraadcorrectiesQuery: TZQuery
+    Connection = ZConnection
+    SQL.Strings = (
+      'select * from voorraadcorrecties_update(:omzetgroep,:soort,:datum,:artikelnummer,:omschrijving,:aantal,:waarde)'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'omzetgroep'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'soort'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'datum'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'artikelnummer'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'omschrijving'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'aantal'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'waarde'
+        ParamType = ptUnknown
+      end>
+    left = 200
+    top = 184
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'omzetgroep'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'soort'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'datum'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'artikelnummer'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'omschrijving'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'aantal'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'waarde'
+        ParamType = ptUnknown
+      end>
+  end
+  object ZVoorraadcorrectiesDelete: TZSQLProcessor
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'mindatum'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'maxdatum'
+        ParamType = ptUnknown
+      end>
+    Script.Strings = (
+      'delete from voorraadcorrecties v where v.DATUM >= :mindatum and v.DATUM <= :maxdatum'
+    )
+    Connection = ZConnection
+    Delimiter = ';'
+    left = 52
+    top = 184
+  end
+  object ZDaginfo: TZQuery
+    Connection = ZConnection
+    SQL.Strings = (
+      'select * from daginfo(:jaarweek);'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'jaarweek'
+        ParamType = ptUnknown
+      end>
+    left = 200
+    top = 248
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'jaarweek'
+        ParamType = ptUnknown
+      end>
+  end
+  object ZPMTInfo: TZQuery
+    Connection = ZConnection
+    SQL.Strings = (
+      'SELECT max( p.AFDELING) as afdeling, sum(p.MAANDAGOMZET) as maandag,'
+      'sum(p.dinsdagomzet) as dinsdag,sum(p.woensdagomzet) as woensdag,sum(p.DONDERDAGOMZET) as donderdag, sum(p.vrijdagomzet) as vrijdag,sum(p.zaterdagomzet) as zaterdag,sum(p.zondagomzet) as zondag'
+      'FROM DAGINFO_NIEUW (:JAARWEEK) p  group by p.afdeling;'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'JAARWEEK'
+        ParamType = ptUnknown
+      end>
+    left = 200
+    top = 320
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'JAARWEEK'
+        ParamType = ptUnknown
+      end>
+  end
+  object ZWeekInfoNieuw: TZReadOnlyQuery
+    Connection = ZConnection
+    SQL.Strings = (
+      'select * from weekinfoRAPPORT(:JAARWEEK)'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'JAARWEEK'
+        ParamType = ptUnknown
+      end>
+    left = 208
+    top = 472
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'JAARWEEK'
+        ParamType = ptUnknown
+      end>
+  end
+  object ZAfdelinginfo: TZReadOnlyQuery
+    Connection = ZConnection
+    SQL.Strings = (
+      'SELECT first 234 p.JAARWEEK, p.AFDELING_ID, sum(p.NORMOMZET) as normomzet, sum(p.WEEKOMZET) as weekomzet'
+      '    ,case when afdeling_id = 1 then max( p.NORMWEEKDERVING) else sum(p.NORMWEEKDERVING) end as normweekderving,sum( p.WEEKDERVING) as weekderving, sum(totaalomzet) as TOTAALOMZET'
+      'FROM AFDELINGINFO  p group by p.JAARWEEK,p.AFDELING_ID order by  p.JAARWEEK desc'
+    )
+    Params = <>
+    MasterFields = 'AFDELING_ID'
+    MasterSource = Form1.DatasourceAfdeling
+    LinkedFields = 'AFDELING_ID'
+    left = 48
+    top = 320
+  end
+  object ZAfdelingUren: TZQuery
+    Connection = ZConnection
+    UpdateObject = ZUpdateSQL1
+    BeforePost = ZAfdelingUrenBeforePost
+    SQL.Strings = (
+      'select * from afdeling a left join uren u on a.afdeling_id = u.afdeling_id where u.jaarweek = :jaarweek or u.jaarweek is null'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'jaarweek'
+        ParamType = ptUnknown
+      end>
+    UpdateMode = umUpdateAll
+    WhereMode = wmWhereAll
+    left = 42
+    top = 391
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'jaarweek'
+        ParamType = ptUnknown
+      end>
+  end
+  object ZUpdateSQL1: TZUpdateSQL
+    InsertSQL.Strings = (
+      'update or insert into uren(uren,afdeling_id,jaarweek) values(:uren,:afdeling_id,:jaarweek)'
+    )
+    ModifySQL.Strings = (
+      'update or insert into uren(uren,afdeling_id,jaarweek) values(:uren,:afdeling_id,:jaarweek)'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    BeforeInsertSQL = ZUpdateSQL1BeforeInsertSQL
+    BeforeModifySQL = ZUpdateSQL1BeforeModifySQL
+    left = 131
+    top = 392
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'uren'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'afdeling_id'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'jaarweek'
+        ParamType = ptUnknown
+      end>
+  end
+  object ZJaarweekUren: TZQuery
+    Connection = ZConnection
+    AfterScroll = ZJaarweekUrenAfterScroll
+    SQL.Strings = (
+      'select f_datetoyearweek(o.datum) as JAARWEEK from omzetgegevens o group by f_datetoyearweek(o.datum) order by f_datetoyearweek(o.datum)desc'
+    )
+    Params = <>
+    left = 64
+    top = 248
+  end
+  object ZDaginfoNieuw: TZQuery
+    Connection = ZConnection
+    ReadOnly = True
+    SQL.Strings = (
+      'select * from daginfo_nieuw(:jaarweek);'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'jaarweek'
+        ParamType = ptUnknown
+      end>
+    left = 208
+    top = 536
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'jaarweek'
+        ParamType = ptUnknown
+      end>
+  end
+end

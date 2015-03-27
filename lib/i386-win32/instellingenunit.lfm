@@ -1,0 +1,179 @@
+object FormInstellingen: TFormInstellingen
+  Left = 684
+  Height = 240
+  Top = 230
+  Width = 545
+  Caption = 'FormInstellingen'
+  ClientHeight = 240
+  ClientWidth = 545
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  SessionProperties = 'EditAfdelingRapport.Text;EditDagInfoRapport.Text;EditDatabase.Text;EditHost.Text;EditPassword.Text;EditPMTRapport.Text;EditUser.Text;EditWeekInfoRapport.Text'
+  LCLVersion = '1.2.0.3'
+  object Panel1: TPanel
+    Left = 0
+    Height = 24
+    Top = 216
+    Width = 545
+    Align = alBottom
+    ClientHeight = 24
+    ClientWidth = 545
+    TabOrder = 0
+    object Button1: TButton
+      Left = 6
+      Height = 25
+      Top = 0
+      Width = 75
+      Caption = 'Sluiten'
+      OnClick = Button1Click
+      TabOrder = 0
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 216
+    Top = 0
+    Width = 545
+    Align = alClient
+    ClientHeight = 216
+    ClientWidth = 545
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 6
+      Height = 15
+      Top = 2
+      Width = 48
+      Caption = 'Database'
+      ParentColor = False
+    end
+    object Label2: TLabel
+      Left = 6
+      Height = 15
+      Top = 25
+      Width = 25
+      Caption = 'Host'
+      ParentColor = False
+    end
+    object Label3: TLabel
+      Left = 6
+      Height = 15
+      Top = 50
+      Width = 51
+      Caption = 'Gebruiker'
+      ParentColor = False
+    end
+    object Label4: TLabel
+      Left = 6
+      Height = 15
+      Top = 74
+      Width = 68
+      Caption = 'Wachtwoord'
+      ParentColor = False
+    end
+    object Label5: TLabel
+      Left = 6
+      Height = 15
+      Top = 98
+      Width = 84
+      Caption = 'DaginfoRapport'
+      ParentColor = False
+    end
+    object Label6: TLabel
+      Left = 6
+      Height = 15
+      Top = 123
+      Width = 92
+      Caption = 'WeekinfoRapport'
+      ParentColor = False
+    end
+    object Label7: TLabel
+      Left = 6
+      Height = 15
+      Top = 144
+      Width = 100
+      Caption = 'PMT omzetrapport'
+      ParentColor = False
+    end
+    object Label8: TLabel
+      Left = 6
+      Height = 15
+      Top = 170
+      Width = 87
+      Caption = 'AfdelingRapport'
+      ParentColor = False
+    end
+    object EditDatabase: TEdit
+      Left = 120
+      Height = 23
+      Top = 2
+      Width = 420
+      TabOrder = 0
+      Text = 'EditDatabase'
+    end
+    object EditHost: TEdit
+      Left = 120
+      Height = 23
+      Top = 25
+      Width = 420
+      TabOrder = 1
+      Text = 'EditHost'
+    end
+  end
+  object EditUser: TEdit
+    Left = 120
+    Height = 23
+    Top = 48
+    Width = 420
+    TabOrder = 2
+    Text = 'EditUser'
+  end
+  object EditPassword: TEdit
+    Left = 120
+    Height = 23
+    Top = 72
+    Width = 420
+    TabOrder = 3
+    Text = 'EditPassword'
+  end
+  object EditDagInfoRapport: TEdit
+    Left = 120
+    Height = 23
+    Top = 96
+    Width = 420
+    TabOrder = 4
+    Text = 'EditDagInfoRapport'
+  end
+  object EditWeekInfoRapport: TEdit
+    Left = 120
+    Height = 23
+    Top = 120
+    Width = 420
+    TabOrder = 5
+    Text = 'EditWeekInfoRapport'
+  end
+  object EditPMTRapport: TEdit
+    Left = 120
+    Height = 23
+    Top = 144
+    Width = 420
+    TabOrder = 6
+    Text = 'EditPMTRapport'
+  end
+  object EditAfdelingRapport: TEdit
+    Left = 120
+    Height = 23
+    Top = 168
+    Width = 420
+    TabOrder = 7
+    Text = 'EditAfdelingRapport'
+  end
+  object IniPropStorage1: TIniPropStorage
+    StoredValues = <>
+    IniFileName = 'odn.ini'
+    IniSection = 'instellingen'
+    left = 72
+    top = 16
+  end
+end
