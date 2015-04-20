@@ -30,6 +30,8 @@ type
     MenuInstellingen: TMenuItem;
     MenuUren: TMenuItem;
     sWorkbook: TsWorkbookSource;
+    Daginfo: TfrReport;
+    PMTinfo: TfrReport;
     WeekinfoNieuwButton: TButton;
     DatasourcePMTinfo: TDatasource;
     DatasourceWeekinfo: TDatasource;
@@ -52,13 +54,13 @@ type
     Panel2: TPanel;
     OmzetDirectoryDialoog: TSelectDirectoryDialog;
     sOmzetGrid : TsWorkSheetgrid;
-    WeekinfoNieuwButton1: TButton;
+    DaginfoNieuwButton1: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure MenuInstellingenClick(Sender: TObject);
-    procedure WeekinfoNieuwButton1Click(Sender: TObject);
+    procedure DaginfoNieuwButton1Click(Sender: TObject);
     procedure WeekinfoNieuwButtonClick(Sender: TObject);
     procedure buttonomzetClick(Sender: TObject);
     procedure DervingInfoButtenClick(Sender: TObject);
@@ -360,9 +362,9 @@ begin
    if dm.ZPMTinfo.Params.Count = 1 then
    dm.ZPMTinfo.ParamByName('JAARWEEK').AsInteger:= dm.ZJAARWEEK.FieldByName('JAARWEEK').AsInteger;
    dm.ZPMTinfo.Active:= true;
-   weekinfo.LoadFromFile(Instellingenunit.FormInstellingen.EditPMTRapport.text);
+  // weekinfo.LoadFromFile(Instellingenunit.FormInstellingen.EditPMTRapport.text);
   // weekinfo.LoadFromFile('C:\Users\chrgra\Documents\Projecten\ODN\ODN Eiland\reports\daginfo_voor_personeelstool.lrf');
-   Weekinfo.ShowReport;
+   PMTinfo.ShowReport;
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
@@ -391,17 +393,17 @@ begin
   dataunit.DM.ZJaarweek.Open;
 end;
 
-procedure TForm1.WeekinfoNieuwButton1Click(Sender: TObject);
+procedure TForm1.DaginfoNieuwButton1Click(Sender: TObject);
 begin
    dm.ZDaginfonieuw.Close;
    dm.ZConnection.Commit;
    if dm.Zdaginfonieuw.Params.Count = 1 then
    dm.Zdaginfonieuw.ParamByName('JAARWEEK').AsInteger:= dm.ZJAARWEEK.FieldByName('JAARWEEK').AsInteger;
    dm.zdaginfonieuw.Active:= true;
-   weekinfo.LoadFromFile(Instellingenunit.FormInstellingen.EditDagInfoRapport.Text);
+   //weekinfo.LoadFromFile(Instellingenunit.FormInstellingen.EditDagInfoRapport.Text);
   // weekinfo.LoadFromFile('C:\Users\chrgra\Documents\Projecten\ODN\reports\daginfo_nieuw.lrf');
 
-   Weekinfo.ShowReport;
+   daginfo.ShowReport;
 
 end;
 
@@ -412,7 +414,7 @@ begin
    if dm.Zweekinfonieuw.Params.Count = 1 then
    dm.Zweekinfonieuw.ParamByName('JAARWEEK').AsInteger:= dm.ZJAARWEEK.FieldByName('JAARWEEK').AsInteger;
    dm.zweekinfonieuw.Active:= true;
-   weekinfo.LoadFromFile(Instellingenunit.FormInstellingen.EditWeekInfoRapport.text);
+   //weekinfo.LoadFromFile(Instellingenunit.FormInstellingen.EditWeekInfoRapport.text);
   // weekinfo.LoadFromFile('C:\Users\chrgra\Documents\Projecten\ODN\reports\weekinfo4.lrf');
    Weekinfo.ShowReport;
 end;
