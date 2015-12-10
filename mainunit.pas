@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, FileUtil, TADbSource, TAGraph, LR_Desgn, LR_Class,
   LR_DBSet, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls, Buttons,
   Menus, fpspreadsheet, xlsbiff8, xlsbiff5, laz_fpspreadsheet, fpspreadsheetgrid,
-  fpspreadsheetctrls, rxdbgrid, dataunit, db, urenunit,fpsallformats,fpstypes;
+  fpspreadsheetctrls, rxdbgrid, dataunit, db, urenunit,fpsallformats,fpstypes, vinfo;
 
 
 
@@ -300,7 +300,17 @@ begin
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
+var
+  Info: TVersionInfo;
+  Version: string;
 begin
+  decimalseparator := '.';
+  thousandseparator := ',';
+  Info := TVersionInfo.Create;
+  Info.Load(HINSTANCE);
+  self.Caption := Format('Dagomzet voor Personeelstool Versie %d.%d.%d build %d Hoofdmenu', [Info.FixedInfo.FileVersion[0],Info.FixedInfo.FileVersion[1],Info.FixedInfo.FileVersion[2],Info.FixedInfo.FileVersion[3]]);
+  Info.Free;
+
 
 end;
 
