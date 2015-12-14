@@ -285,7 +285,10 @@ begin
    begin
       leesomzetspreadsheet(omzetdialoog.filename);
    end;
-   dm.ZJaarweek.refresh;
+   dataunit.DM.ZConnection.Disconnect;
+   dataunit.DM.ZConnection.Connect;
+   dataunit.DM.ZJaarweek.Open;
+   //dm.ZJaarweek.refresh;
 end;
 
 procedure TForm1.DervingInfoButtenClick(Sender: TObject);
