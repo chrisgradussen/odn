@@ -24,8 +24,8 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="325"/>
-        <CursorPos X="40" Y="331"/>
+        <TopLine Value="273"/>
+        <CursorPos X="44" Y="279"/>
         <UsageCount Value="205"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -55,7 +55,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="62"/>
         <CursorPos X="65" Y="75"/>
-        <UsageCount Value="91"/>
+        <UsageCount Value="103"/>
       </Unit3>
       <Unit4>
         <Filename Value="urenunit.pas"/>
@@ -68,7 +68,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="56"/>
         <CursorPos X="108" Y="65"/>
-        <UsageCount Value="59"/>
+        <UsageCount Value="71"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit4>
@@ -78,7 +78,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="994"/>
         <CursorPos X="1" Y="1007"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="11"/>
       </Unit5>
       <Unit6>
         <Filename Value="C:\lazarus_10\zeoslib\src\dbc\ZDbcInterbase6Utils.pas"/>
@@ -86,7 +86,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="835"/>
         <CursorPos X="21" Y="838"/>
-        <UsageCount Value="14"/>
+        <UsageCount Value="13"/>
       </Unit6>
       <Unit7>
         <Filename Value="C:\lazarus_10\zeoslib\src\dbc\ZDbcUtils.pas"/>
@@ -94,7 +94,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="318"/>
         <CursorPos X="1" Y="328"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="12"/>
       </Unit7>
       <Unit8>
         <Filename Value="C:\lazarus_120\components\lazarus-ccr-svn\components\rx\trunk\tooledit.pas"/>
@@ -102,7 +102,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="793"/>
         <CursorPos X="26" Y="805"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
       </Unit8>
       <Unit9>
         <Filename Value="mainunit.lfm"/>
@@ -122,7 +122,7 @@
           <TopLine Value="6"/>
           <CursorPos X="54" Y="17"/>
         </ExtraEditor2>
-        <UsageCount Value="21"/>
+        <UsageCount Value="20"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit9>
       <Unit10>
@@ -131,21 +131,21 @@
         <WindowIndex Value="0"/>
         <TopLine Value="261"/>
         <CursorPos X="41" Y="275"/>
-        <UsageCount Value="15"/>
+        <UsageCount Value="14"/>
       </Unit10>
       <Unit11>
         <Filename Value="C:\lazarus_126\components\zeosdbo\src\ZeosLazarus.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="120"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit11>
       <Unit12>
         <Filename Value="C:\lazarus_126\components\zeosdbo\src\Zeos.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="389"/>
         <CursorPos X="5" Y="396"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit12>
       <Unit13>
         <Filename Value="C:\lazarus_126\components\zeosdbo\src\component\ZAbstractConnection.pas"/>
@@ -153,7 +153,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="940"/>
         <CursorPos X="1" Y="950"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="12"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit13>
       <Unit14>
@@ -162,7 +162,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="16" Y="13"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit14>
       <Unit15>
         <Filename Value="..\..\..\usr\share\lazarus\1.2.6\components\lazarus-ccr-svn\components\fpspreadsheet\xlsbiff5.pas"/>
@@ -170,7 +170,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="312"/>
         <CursorPos X="45" Y="334"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit15>
       <Unit16>
         <Filename Value="..\..\..\usr\share\lazarus\1.2.6\components\lazarus-ccr-svn\components\fpspreadsheet\fpszipper.pp"/>
@@ -178,7 +178,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1777"/>
         <CursorPos X="11" Y="1788"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit16>
     </Units>
     <General>
