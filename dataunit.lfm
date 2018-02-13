@@ -5,9 +5,9 @@ object DM: TDM
   HorizontalOffset = 1338
   VerticalOffset = 80
   Width = 288
+  PPI = 96
   object ZConnection: TZConnection
     ControlsCodePage = cCP_UTF8
-    AutoEncodeStrings = False
     Properties.Strings = (
       'AutoEncodeStrings='
     )
@@ -17,10 +17,10 @@ object DM: TDM
     BeforeConnect = ZConnectionBeforeConnect
     HostName = 'localhost'
     Port = 0
-    Database = 'C:\Users\chrgra\Documents\Projecten\ODN\ODN.FDB'
+    Database = '/home/chrgra/Documenten/odn/ODN.FDB'
     User = 'sysdba'
     Password = 'masterkey'
-    Protocol = 'firebird-2.5'
+    Protocol = 'firebirdd-2.5'
     left = 52
     top = 8
   end
