@@ -5,22 +5,23 @@ object DM: TDM
   HorizontalOffset = 1338
   VerticalOffset = 80
   Width = 288
+  PPI = 96
   object ZConnection: TZConnection
     ControlsCodePage = cCP_UTF8
-    AutoEncodeStrings = False
     Properties.Strings = (
       'AutoEncodeStrings='
     )
     AutoCommit = False
     TransactIsolationLevel = tiReadCommitted
+    Connected = True
     DesignConnection = True
     BeforeConnect = ZConnectionBeforeConnect
     HostName = 'localhost'
     Port = 0
-    Database = 'C:\Users\chrgra\Documents\Projecten\ODN\ODN.FDB'
+    Database = '/home/chrgra/Documenten/odn/ODN.FDB'
     User = 'sysdba'
     Password = 'masterkey'
-    Protocol = 'firebird-2.5'
+    Protocol = 'firebirdd-2.5'
     left = 52
     top = 8
   end
@@ -71,15 +72,36 @@ object DM: TDM
   end
   object ZAfdeling: TZQuery
     Connection = ZConnection
+    Active = True
     SQL.Strings = (
-      'select * from afdeling'
+      'select a.*, a.afdeling_id || ''  ''|| a.OMSCHRIJVING as ZOEKEN from afdeling a'
     )
     Params = <>
     left = 200
     top = 69
+    object ZAfdelingAFDELING_ID: TLongintField
+      FieldKind = fkData
+      FieldName = 'AFDELING_ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZAfdelingOMSCHRIJVING: TStringField
+      FieldKind = fkData
+      FieldName = 'OMSCHRIJVING'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 180
+    end
   end
   object ZJaarweek: TZQuery
     Connection = ZConnection
+    Active = True
     SQL.Strings = (
       'select f_datetoyearweek(o.datum) as JAARWEEK from omzetgegevens o group by f_datetoyearweek(o.datum) order by f_datetoyearweek(o.datum)desc'
     )
@@ -305,66 +327,67 @@ object DM: TDM
   end
   object ZAfdelingUren: TZQuery
     Connection = ZConnection
-    UpdateObject = ZUpdateSQL1
     BeforePost = ZAfdelingUrenBeforePost
+    Active = True
     SQL.Strings = (
-      'select * from afdeling a left join uren u on a.afdeling_id = u.afdeling_id where u.jaarweek = :jaarweek or u.jaarweek is null'
-    )
-    Params = <    
-      item
-        DataType = ftUnknown
-        Name = 'jaarweek'
-        ParamType = ptUnknown
-      end>
-    UpdateMode = umUpdateAll
-    WhereMode = wmWhereAll
-    left = 42
-    top = 391
-    ParamData = <    
-      item
-        DataType = ftUnknown
-        Name = 'jaarweek'
-        ParamType = ptUnknown
-      end>
-  end
-  object ZUpdateSQL1: TZUpdateSQL
-    InsertSQL.Strings = (
-      'update or insert into uren(uren,afdeling_id,jaarweek) values(:uren,:afdeling_id,:jaarweek)'
-    )
-    ModifySQL.Strings = (
-      'update or insert into uren(uren,afdeling_id,jaarweek) values(:uren,:afdeling_id,:jaarweek)'
-    )
-    UseSequenceFieldForRefreshSQL = False
-    BeforeInsertSQL = ZUpdateSQL1BeforeInsertSQL
-    BeforeModifySQL = ZUpdateSQL1BeforeModifySQL
-    left = 131
-    top = 392
-    ParamData = <    
-      item
-        DataType = ftUnknown
-        Name = 'uren'
-        ParamType = ptUnknown
-      end    
-      item
-        DataType = ftUnknown
-        Name = 'afdeling_id'
-        ParamType = ptUnknown
-      end    
-      item
-        DataType = ftUnknown
-        Name = 'jaarweek'
-        ParamType = ptUnknown
-      end>
-  end
-  object ZJaarweekUren: TZQuery
-    Connection = ZConnection
-    AfterScroll = ZJaarweekUrenAfterScroll
-    SQL.Strings = (
-      'select f_datetoyearweek(o.datum) as JAARWEEK from omzetgegevens o group by f_datetoyearweek(o.datum) order by f_datetoyearweek(o.datum)desc'
+      'select jaarweek, afdeling, normuren,uren from urengegevens'
     )
     Params = <>
-    left = 64
-    top = 248
+    MasterFields = 'JAARWEEK'
+    MasterSource = Form2.DatasourceJaarweek
+    LinkedFields = 'JAARWEEK'
+    UpdateMode = umUpdateAll
+    WhereMode = wmWhereAll
+    left = 48
+    top = 472
+    object ZAfdelingUrenJAARWEEK: TLongintField
+      FieldKind = fkData
+      FieldName = 'JAARWEEK'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Visible = False
+    end
+    object ZAfdelingUrenNORMUREN: TFloatField
+      FieldKind = fkData
+      FieldName = 'NORMUREN'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object ZAfdelingUrenAFDELING: TLongintField
+      DisplayWidth = 50
+      FieldKind = fkData
+      FieldName = 'AFDELING'
+      Index = 2
+      KeyFields = 'AFDELING'
+      LookupCache = True
+      LookupDataSet = ZAfdelinginfo
+      LookupKeyFields = 'AFDELING_ID'
+      LookupResultField = 'AFDELING_ID'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZAfdelingUrenUREN: TFloatField
+      FieldKind = fkData
+      FieldName = 'UREN'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
   end
   object ZDaginfoNieuw: TZQuery
     Connection = ZConnection
