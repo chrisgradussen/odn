@@ -21,6 +21,7 @@ type
     ZAfdelingUrenUREN: TFloatField;
     ZConnection: TZConnection;
     ZDaginfoNieuw: TZQuery;
+    ZWagAdd: TZSQLProcessor;
     ZPMTInfo: TZQuery;
     ZJaarweek: TZQuery;
     ZAfdelinginfo: TZReadOnlyQuery;
@@ -45,6 +46,8 @@ type
     procedure ZomzetgegevensStoredBeforeOpen(DataSet: TDataSet);
     procedure ZUpdateSQL1BeforeInsertSQL(Sender: TObject);
     procedure ZUpdateSQL1BeforeModifySQL(Sender: TObject);
+    procedure ZWagAddAfterExecute(Processor: TZSQLProcessor;
+      StatementIndex: Integer);
   private
     { private declarations }
   public
@@ -71,6 +74,12 @@ begin
 end;
 
 procedure TDM.ZUpdateSQL1BeforeModifySQL(Sender: TObject);
+begin
+
+end;
+
+procedure TDM.ZWagAddAfterExecute(Processor: TZSQLProcessor;
+  StatementIndex: Integer);
 begin
 
 end;

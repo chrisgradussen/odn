@@ -305,17 +305,28 @@ begin
   begin
     wagomzet[y+1] := '';
   end;
+  somzetgrid.Clear;
   try
     sWorkbook.LoadFromSpreadsheetFile(Filename, sfOOXML);
   except
     try
       sWorkbook.LoadFromSpreadsheetFile(Filename, sfOOXML);
     except
-      showmessage('niets kunnen laden');
-      exit;
+      try
+         sWorkbook.LoadFromSpreadsheetFile(Filename, sfExcel5);
+      except
+         try
+          sWorkbook.LoadFromSpreadsheetFile(Filename, sfExcel8);
+
+        except
+           showmessage('niets kunnen laden');
+          exit;
+        end;
+      end;
+
     end;
   end;
-  //showmessage(somzetgrid.worksheet.findcell(2,13)^.UTF8StringValue);
+  showmessage(somzetgrid.worksheet.findcell(2,13)^.UTF8StringValue);
   //showmessage(somzetgrid.worksheet.findcell(6,2)^.utf8stringvalue);
  // somzetgrid.Worksheet.Cells[1,1] := 'hallo';
   if pos('OPE1010 - Omzet totaal',somzetgrid.Worksheet.FindCell(2,13)^.UTF8StringValue) = 1 then
@@ -354,7 +365,19 @@ begin
           dm.ZOmzetgegevensAdd.ParamByName('datum').asdatetime:= strtodate(datumstr[y+1]);
           dm.ZOmzetgegevensAdd.ParamByName('wag_id').AsInteger:= strtoint(wagnummer);
           dm.ZOmzetgegevensAdd.ParamByName('waarde').AsFloat:= strtofloat(wagomzet[y+1]);
+          try
           dm.ZOmzetgegevensAdd.Execute;
+          except
+          try
+            dm.ZWagAdd.ParamByName('wag_id').asinteger := strtoint(wagnummer);
+            dm.ZWagAdd.ParamByName('omschrijving').AsString := (wagomschrijving);
+            dm.ZWagAdd.Execute;
+            dm.ZWagAdd.connection.commit;
+            dm.ZOmzetgegevensAdd.Execute;
+          except
+            showmessage('iets fout met wagnummer');
+          end;
+          end;
           dm.ZOmzetgegevensAdd.Connection.Commit;
         end;
       end;

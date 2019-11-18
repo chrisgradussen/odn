@@ -375,6 +375,8 @@ object DM: TDM
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
+      DisplayFormat = '0'
+      EditFormat = '0'
     end
     object ZAfdelingUrenUREN: TFloatField
       FieldKind = fkData
@@ -409,5 +411,31 @@ object DM: TDM
         Name = 'jaarweek'
         ParamType = ptUnknown
       end>
+  end
+  object ZWagAdd: TZSQLProcessor
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'wag_id'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OMSCHRIJVING'
+        ParamType = ptUnknown
+      end>
+    Script.Strings = (
+      'INSERT INTO WAG (WAG_ID, OMSCHRIJVING, OMZETGROEP_ID)'
+      'VALUES ('
+      '    :WAG_ID, '
+      '    :OMSCHRIJVING, '
+      '    1'
+      ');'
+    )
+    Connection = ZConnection
+    Delimiter = ';'
+    AfterExecute = ZWagAddAfterExecute
+    left = 52
+    top = 248
   end
 end

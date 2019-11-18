@@ -412,4 +412,30 @@ object DM: TDM
         ParamType = ptUnknown
       end>
   end
+  object ZWagAdd: TZSQLProcessor
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'wag_id'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftString
+        Name = 'OMSCHRIJVING'
+        ParamType = ptUnknown
+      end>
+    Script.Strings = (
+      'INSERT INTO WAG (WAG_ID, OMSCHRIJVING, OMZETGROEP_ID)'
+      'VALUES ('
+      '    :WAG_ID, '
+      '    :OMSCHRIJVING, '
+      '    1'
+      ');'
+    )
+    Connection = ZConnection
+    Delimiter = ';'
+    AfterExecute = ZWagAddAfterExecute
+    left = 52
+    top = 248
+  end
 end
