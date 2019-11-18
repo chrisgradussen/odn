@@ -6,15 +6,16 @@ interface
 
 uses
   Classes, SysUtils, db, FileUtil, rxdbgrid, rxmemds, Forms, Controls, Graphics,
-  Dialogs, ExtCtrls, dataunit;
+  Dialogs, ExtCtrls, DBGrids, dataunit;
 
 type
 
   { TForm2 }
 
   TForm2 = class(TForm)
-    DataSource1: TDataSource;
     DataSource2: TDataSource;
+    DatasourceJaarweek: TDataSource;
+    DBGrid1: TDBGrid;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
@@ -26,6 +27,7 @@ type
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure RxDBGrid2AfterQuickSearch(Sender: TObject; Field: TField;
       var AValue: string);
+    procedure TRxColumnEditButtons1Click(Sender: TObject);
   private
     { private declarations }
   public
@@ -47,6 +49,11 @@ begin
 
 end;
 
+procedure TForm2.TRxColumnEditButtons1Click(Sender: TObject);
+begin
+  showmessage(' on click' );
+end;
+
 procedure TForm2.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
 
@@ -62,8 +69,8 @@ begin
   if dm.ZAfdelingUren.Active then
   begin
   //showmessage('afdelinguren : '+ inttostr(dm.ZAfdelingUren.ParamByName('jaarweek').AsInteger));
-  dm.ZAfdelingUren.ParamByName('jaarweek').AsInteger := dm.ZJaarweekUren.FieldByName('jaarweek').AsInteger;
-  dm.ZAfdelingUren.Refresh;
+ // dm.ZAfdelingUren.ParamByName('jaarweek').AsInteger := dm.ZJaarweekUren.FieldByName('jaarweek').AsInteger;
+  //dm.ZAfdelingUren.Refresh;
   //showmessage('afdelinguren : '+ inttostr(dm.ZAfdelingUren.ParamByName('jaarweek').AsInteger));
   end;
 

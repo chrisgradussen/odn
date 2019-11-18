@@ -13,14 +13,18 @@ type
   { TDM }
 
   TDM = class(TDataModule)
+    ZAfdelingAFDELING_ID: TLongintField;
+    ZAfdelingOMSCHRIJVING: TStringField;
+    ZAfdelingUrenAFDELING: TLongintField;
+    ZAfdelingUrenJAARWEEK: TLongintField;
+    ZAfdelingUrenNORMUREN: TFloatField;
+    ZAfdelingUrenUREN: TFloatField;
     ZConnection: TZConnection;
     ZDaginfoNieuw: TZQuery;
-    ZJaarweekUren: TZQuery;
     ZPMTInfo: TZQuery;
     ZJaarweek: TZQuery;
     ZAfdelinginfo: TZReadOnlyQuery;
     ZAfdelingUren: TZQuery;
-    ZUpdateSQL1: TZUpdateSQL;
     ZWeekInfoNieuw: TZReadOnlyQuery;
     ZVoorraadcorrectiesDelete: TZSQLProcessor;
     ZvoorraadcorrectiesQuery: TZQuery;
@@ -30,6 +34,11 @@ type
     ZAfdeling: TZQuery;
     ZDaginfo: TZQuery;
     procedure DataModuleCreate(Sender: TObject);
+    procedure ZAfdelingUrenAFDELINGChange(Sender: TField);
+    procedure ZAfdelingUrenAFDELINGGetText(Sender: TField; var aText: string;
+      DisplayText: Boolean);
+    procedure ZAfdelingUrenAFDELINGSetText(Sender: TField; const aText: string);
+    procedure ZAfdelingUrenAFDELINGValidate(Sender: TField);
     procedure ZAfdelingUrenBeforePost(DataSet: TDataSet);
     procedure ZConnectionBeforeConnect(Sender: TObject);
     procedure ZJaarweekUrenAfterScroll(DataSet: TDataSet);
@@ -63,7 +72,7 @@ end;
 
 procedure TDM.ZUpdateSQL1BeforeModifySQL(Sender: TObject);
 begin
-  dm.ZAfdelingUren.ParamByName('jaarweek').AsInteger := dm.ZJaarweekUren.FieldByName('jaarweek').AsInteger;
+
 end;
 
 procedure TDM.DataModuleCreate(Sender: TObject);
@@ -71,10 +80,32 @@ begin
 
 end;
 
+procedure TDM.ZAfdelingUrenAFDELINGChange(Sender: TField);
+begin
+  showmessage(' onchange : ' +sender.Text);
+end;
+
+procedure TDM.ZAfdelingUrenAFDELINGGetText(Sender: TField; var aText: string;
+  DisplayText: Boolean);
+begin
+  aText := copy(atext,1,2);
+
+end;
+
+procedure TDM.ZAfdelingUrenAFDELINGSetText(Sender: TField; const aText: string);
+begin
+  showmessage (' on settext : ' + aText);
+end;
+
+procedure TDM.ZAfdelingUrenAFDELINGValidate(Sender: TField);
+begin
+  showmessage(' on validate : ' + sender.Text)
+end;
+
 procedure TDM.ZAfdelingUrenBeforePost(DataSet: TDataSet);
 begin
 
-  dm.ZAfdelingUren.fieldByName('jaarweek').AsInteger := dm.ZJaarweekUren.FieldByName('jaarweek').AsInteger;
+//  dm.ZAfdelingUren.fieldByName('jaarweek').AsInteger := dm.ZJaarweek.FieldByName('jaarweek').AsInteger;
   showmessage('before post : '+inttostr(dm.ZAfdelingUren.fieldByName('jaarweek').AsInteger));
 end;
 

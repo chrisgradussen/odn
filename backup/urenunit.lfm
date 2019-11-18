@@ -1,0 +1,299 @@
+object Form2: TForm2
+  Left = 555
+  Height = 419
+  Top = 506
+  Width = 1107
+  Caption = 'Form2'
+  ClientHeight = 419
+  ClientWidth = 1107
+  OnClose = FormClose
+  LCLVersion = '1.8.0.6'
+  object Panel1: TPanel
+    Left = 0
+    Height = 300
+    Top = 119
+    Width = 1107
+    Align = alBottom
+    Caption = 'Panel1'
+    ClientHeight = 300
+    ClientWidth = 1107
+    TabOrder = 0
+    object DBGrid1: TDBGrid
+      Left = 1
+      Height = 298
+      Top = 1
+      Width = 1105
+      Align = alClient
+      Color = clWindow
+      Columns = <      
+        item
+          Title.Caption = 'NORMUREN'
+          FieldName = 'NORMUREN'
+        end      
+        item
+          Title.Caption = 'UREN'
+          FieldName = 'UREN'
+        end      
+        item
+          PickList.Strings = (
+            '1 dffadafdlajfafjld'
+          )
+          Title.Caption = 'AFDELING'
+          FieldName = 'AFDELING'
+        end>
+      DataSource = DataSource2
+      TabOrder = 0
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 119
+    Top = 0
+    Width = 937
+    Align = alClient
+    Caption = 'Panel2'
+    ClientHeight = 119
+    ClientWidth = 937
+    TabOrder = 1
+    object RxDBGrid2: TRxDBGrid
+      Left = 1
+      Height = 117
+      Top = 1
+      Width = 935
+      AfterQuickSearch = RxDBGrid2AfterQuickSearch
+      ColumnDefValues.BlobText = '(blob)'
+      TitleButtons = False
+      AutoSort = True
+      Columns = <      
+        item
+          Title.Alignment = taCenter
+          Title.Orientation = toHorizontal
+          Title.Caption = 'JAARWEEK'
+          FieldName = 'JAARWEEK'
+          EditButtons = <>
+          Filter.DropDownRows = 0
+          Filter.EmptyValue = '(Empty)'
+          Filter.NotEmptyValue = '(Not empty)'
+          Filter.AllValue = '(All values)'
+          Filter.EmptyFont.Style = [fsItalic]
+          Filter.ItemIndex = -1
+          Footers = <>
+        end      
+        item
+          Title.Alignment = taCenter
+          Title.Orientation = toHorizontal
+          Title.Caption = 'NORMUREN'
+          FieldName = 'NORMUREN'
+          EditButtons = <>
+          Filter.DropDownRows = 0
+          Filter.EmptyValue = '(Empty)'
+          Filter.NotEmptyValue = '(Not empty)'
+          Filter.AllValue = '(All values)'
+          Filter.EmptyFont.Style = [fsItalic]
+          Filter.ItemIndex = -1
+          Footers = <>
+        end      
+        item
+          Title.Alignment = taCenter
+          Title.Orientation = toHorizontal
+          Title.Caption = 'UREN'
+          FieldName = 'UREN'
+          EditButtons = <>
+          Filter.DropDownRows = 0
+          Filter.EmptyValue = '(Empty)'
+          Filter.NotEmptyValue = '(Not empty)'
+          Filter.AllValue = '(All values)'
+          Filter.EmptyFont.Style = [fsItalic]
+          Filter.ItemIndex = -1
+          Footers = <>
+        end      
+        item
+          DropDownRows = 3
+          PickList.Strings = (
+            '1 fggjkghllhg'
+            '2 jhjhjkhkkh'
+          )
+          Title.Alignment = taCenter
+          Title.Orientation = toHorizontal
+          Title.Caption = 'AFDELING'
+          FieldName = 'AFDELING'
+          EditButtons = <>
+          Filter.DropDownRows = 3
+          Filter.EmptyValue = '(Empty)'
+          Filter.NotEmptyValue = '(Not empty)'
+          Filter.AllValue = '(All values)'
+          Filter.EmptyFont.Style = [fsItalic]
+          Filter.ItemIndex = -1
+          Footers = <>
+        end>
+      KeyStrokes = <      
+        item
+          Command = rxgcShowFindDlg
+          ShortCut = 16454
+          Enabled = True
+        end      
+        item
+          Command = rxgcShowColumnsDlg
+          ShortCut = 16471
+          Enabled = True
+        end      
+        item
+          Command = rxgcShowFilterDlg
+          ShortCut = 16468
+          Enabled = True
+        end      
+        item
+          Command = rxgcShowSortDlg
+          ShortCut = 16467
+          Enabled = True
+        end      
+        item
+          Command = rxgcShowQuickFilter
+          ShortCut = 16465
+          Enabled = True
+        end      
+        item
+          Command = rxgcHideQuickFilter
+          ShortCut = 16456
+          Enabled = True
+        end      
+        item
+          Command = rxgcSelectAll
+          ShortCut = 16449
+          Enabled = True
+        end      
+        item
+          Command = rxgcDeSelectAll
+          ShortCut = 16429
+          Enabled = True
+        end      
+        item
+          Command = rxgcInvertSelection
+          ShortCut = 16426
+          Enabled = True
+        end      
+        item
+          Command = rxgcOptimizeColumnsWidth
+          ShortCut = 16427
+          Enabled = True
+        end      
+        item
+          Command = rxgcCopyCellValue
+          ShortCut = 16451
+          Enabled = True
+        end>
+      FooterOptions.DrawFullLine = False
+      SearchOptions.QuickSearchOptions = [loCaseInsensitive, loPartialKey]
+      SearchOptions.FromStart = False
+      OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+      Align = alClient
+      Color = clWindow
+      DrawFullLine = False
+      FocusColor = clRed
+      SelectedColor = clHighlight
+      GridLineStyle = psSolid
+      DataSource = DataSource2
+      Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+      TabOrder = 0
+    end
+  end
+  object Panel3: TPanel
+    Left = 937
+    Height = 119
+    Top = 0
+    Width = 170
+    Align = alRight
+    Caption = 'Panel3'
+    ClientHeight = 119
+    ClientWidth = 170
+    TabOrder = 2
+    object RxDBGrid1: TRxDBGrid
+      Left = 1
+      Height = 117
+      Top = 1
+      Width = 168
+      ColumnDefValues.BlobText = '(blob)'
+      TitleButtons = False
+      AutoSort = True
+      KeyStrokes = <      
+        item
+          Command = rxgcShowFindDlg
+          ShortCut = 16454
+          Enabled = True
+        end      
+        item
+          Command = rxgcShowColumnsDlg
+          ShortCut = 16471
+          Enabled = True
+        end      
+        item
+          Command = rxgcShowFilterDlg
+          ShortCut = 16468
+          Enabled = True
+        end      
+        item
+          Command = rxgcShowSortDlg
+          ShortCut = 16467
+          Enabled = True
+        end      
+        item
+          Command = rxgcShowQuickFilter
+          ShortCut = 16465
+          Enabled = True
+        end      
+        item
+          Command = rxgcHideQuickFilter
+          ShortCut = 16456
+          Enabled = True
+        end      
+        item
+          Command = rxgcSelectAll
+          ShortCut = 16449
+          Enabled = True
+        end      
+        item
+          Command = rxgcDeSelectAll
+          ShortCut = 16429
+          Enabled = True
+        end      
+        item
+          Command = rxgcInvertSelection
+          ShortCut = 16426
+          Enabled = True
+        end      
+        item
+          Command = rxgcOptimizeColumnsWidth
+          ShortCut = 16427
+          Enabled = True
+        end      
+        item
+          Command = rxgcCopyCellValue
+          ShortCut = 16451
+          Enabled = True
+        end>
+      FooterOptions.DrawFullLine = False
+      SearchOptions.QuickSearchOptions = [loCaseInsensitive, loPartialKey]
+      SearchOptions.FromStart = False
+      OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+      Align = alClient
+      Color = clWindow
+      DrawFullLine = False
+      FocusColor = clRed
+      SelectedColor = clHighlight
+      GridLineStyle = psSolid
+      DataSource = DatasourceJaarweek
+      Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+      TabOrder = 0
+    end
+  end
+  object DataSource2: TDataSource
+    DataSet = DM.ZAfdelingUren
+    left = 107
+    top = 97
+  end
+  object DatasourceJaarweek: TDataSource
+    DataSet = DM.ZJaarweek
+    left = 992
+    top = 80
+  end
+end
