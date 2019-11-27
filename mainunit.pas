@@ -299,6 +299,7 @@ var
    l_decimalseparator : char;
    datumstring     : string;
    waarde          : string;
+   zoekstring      : string;
 
 begin
   for y := 0 to 6 do
@@ -326,10 +327,15 @@ begin
 
     end;
   end;
-  showmessage(somzetgrid.worksheet.findcell(2,13)^.UTF8StringValue);
+  //showmessage(somzetgrid.worksheet.findcell(2,13)^.UTF8StringValue);
   //showmessage(somzetgrid.worksheet.findcell(6,2)^.utf8stringvalue);
  // somzetgrid.Worksheet.Cells[1,1] := 'hallo';
-  if pos('OPE1010 - Omzet totaal',somzetgrid.Worksheet.FindCell(2,13)^.UTF8StringValue) = 1 then
+  zoekstring := '' ;
+  if assigned(somzetgrid.Worksheet.FindCell(2,13)) then
+  begin
+    zoekstring :=  somzetgrid.Worksheet.FindCell(2,13)^.UTF8StringValue;
+  end;
+  if pos('OPE1010 - Omzet totaal',zoekstring) = 1 then
   begin
    // showmessage(' ik ben binnen');
     //load datum
@@ -337,9 +343,18 @@ begin
     begin
     //  showmessage(somzetgrid.worksheet.findcell(11,4+2*i)^.UTF8StringValue);
       datumstr[i+1] := copy(somzetgrid.worksheet.findcell(6,2)^.UTF8StringValue,9,10);
-      datumstr[i+1][3] := '.';
-      datumstr[i+1][6] := '.';
-     // showmessage(datumstr[1+i]);
+      datumstr[i+1][3] := dateseparator;
+      if datumstr[i+1][6] = '-' then
+      begin
+        datumstr[i+1][6] := dateseparator;
+      end
+      else
+      begin
+        datumstr[i+1] := copy(somzetgrid.worksheet.findcell(6,2)^.UTF8StringValue,9,9);
+        datumstr[i+1][3] := dateseparator;
+        datumstr[i+1][5] := dateseparator;
+      end  ;
+
     end;
     //load groep number
     i := 0;
@@ -360,8 +375,8 @@ begin
         memo.Lines.Add(wagnummer+','''+datumstr[y+1]+''','''+wagomzet[y+1]+'''');
         if wagomzet[y+1] <> '' then
         begin
-          datumstr[y+1,3] := dateseparator;
-          datumstr[y+1,6] := dateseparator;
+        //  datumstr[y+1,3] := dateseparator;
+        //  datumstr[y+1,6] := dateseparator;
           dm.ZOmzetgegevensAdd.ParamByName('datum').asdatetime:= strtodate(datumstr[y+1]);
           dm.ZOmzetgegevensAdd.ParamByName('wag_id').AsInteger:= strtoint(wagnummer);
           dm.ZOmzetgegevensAdd.ParamByName('waarde').AsFloat:= strtofloat(wagomzet[y+1]);
