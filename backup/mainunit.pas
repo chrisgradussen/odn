@@ -308,7 +308,7 @@ begin
   end;
   somzetgrid.Clear;
   try
-    sWorkbook.LoadFromSpreadsheetFile(Filename, sfOOXML);
+    sWorkbook.LoadFromSpreadsheetFile(Filename, sfExcelXML);
   except
     try
       sWorkbook.LoadFromSpreadsheetFile(Filename, sfOOXML);
@@ -330,11 +330,12 @@ begin
   //showmessage(somzetgrid.worksheet.findcell(2,13)^.UTF8StringValue);
   //showmessage(somzetgrid.worksheet.findcell(6,2)^.utf8stringvalue);
  // somzetgrid.Worksheet.Cells[1,1] := 'hallo';
-  if assigned(somzetgrid.Worksheet.FindCell(2,13)) then
+  zoekstring := '' ;
+  if assigned(somzetgrid.Worksheet.FindCell(1,13)) then
   begin
-    zoekstring :=  somzetgrid.Worksheet.FindCell(2,13)^.UTF8StringValue;
+    zoekstring :=  somzetgrid.Worksheet.FindCell(1,13)^.UTF8StringValue;
   end;
-  if pos('OPE1010 - Omzet totaal',somzetgrid.Worksheet.FindCell(2,13)^.UTF8StringValue) = 1 then
+  if pos('OPE1010 - Omzet totaal',zoekstring) = 1 then
   begin
    // showmessage(' ik ben binnen');
     //load datum

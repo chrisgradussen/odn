@@ -308,7 +308,7 @@ begin
   end;
   somzetgrid.Clear;
   try
-    sWorkbook.LoadFromSpreadsheetFile(Filename, sfOOXML);
+    sWorkbook.LoadFromSpreadsheetFile(Filename, sfExcelXML);
   except
     try
       sWorkbook.LoadFromSpreadsheetFile(Filename, sfOOXML);
@@ -331,9 +331,9 @@ begin
   //showmessage(somzetgrid.worksheet.findcell(6,2)^.utf8stringvalue);
  // somzetgrid.Worksheet.Cells[1,1] := 'hallo';
   zoekstring := '' ;
-  if assigned(somzetgrid.Worksheet.FindCell(2,13)) then
+  if assigned(somzetgrid.Worksheet.FindCell(1,13)) then
   begin
-    zoekstring :=  somzetgrid.Worksheet.FindCell(2,13)^.UTF8StringValue;
+    zoekstring :=  somzetgrid.Worksheet.FindCell(1,13)^.UTF8StringValue;
   end;
   if pos('OPE1010 - Omzet totaal',zoekstring) = 1 then
   begin
@@ -342,7 +342,7 @@ begin
     for i := 0 to 0 do
     begin
     //  showmessage(somzetgrid.worksheet.findcell(11,4+2*i)^.UTF8StringValue);
-      datumstr[i+1] := copy(somzetgrid.worksheet.findcell(6,2)^.UTF8StringValue,9,10);
+      datumstr[i+1] := copy(somzetgrid.worksheet.findcell(5,2)^.UTF8StringValue,9,10);
       datumstr[i+1][3] := dateseparator;
       if datumstr[i+1][6] = '-' then
       begin
@@ -350,7 +350,7 @@ begin
       end
       else
       begin
-        datumstr[i+1] := copy(somzetgrid.worksheet.findcell(6,2)^.UTF8StringValue,9,9);
+        datumstr[i+1] := copy(somzetgrid.worksheet.findcell(5,2)^.UTF8StringValue,9,9);
         datumstr[i+1][3] := dateseparator;
         datumstr[i+1][5] := dateseparator;
       end  ;
@@ -360,17 +360,17 @@ begin
     i := 0;
     //while assigned(somzetgrid.worksheet.findcell(16+i,0)) do
    // while somzetgrid.worksheet.findcell(16+i,0)^.UTF8StringValue <> '' do
-    while pos('Totaal',somzetgrid.Worksheet.FindCell(15+i,2)^.UTF8StringValue) <> 1 do
+    while pos('Totaal',somzetgrid.Worksheet.FindCell(14+i,2)^.UTF8StringValue) <> 1 do
     begin
-      wagnummer := copy(somzetgrid.worksheet.findcell(15+i,2)^.UTF8StringValue,1,4);
-      wagomschrijving := copy(somzetgrid.worksheet.findcell(15+i,5)^.UTF8StringValue,6,100);
+      wagnummer := copy(somzetgrid.worksheet.findcell(14+i,2)^.UTF8StringValue,1,4);
+      wagomschrijving := copy(somzetgrid.worksheet.findcell(14+i,5)^.UTF8StringValue,6,100);
       for y := 0 to 0 do
       begin
         wagomzet[y+1] := '';
-        if somzetgrid.worksheet.findcell(15+i,9) <> nil then
+        if somzetgrid.worksheet.findcell(14+i,9) <> nil then
         begin
         //  showmessage('i : '+ inttostr(i) + ' ; y : '+ inttostr(y) + ' : ' +  floattostr(somzetgrid.worksheet.findcell(16+i,3+2*y)^.NumberValue));
-          wagomzet[y+1] := floattostr(somzetgrid.worksheet.findcell(15+i,9)^.NumberValue);
+          wagomzet[y+1] := floattostr(somzetgrid.worksheet.findcell(14+i,9)^.NumberValue);
         end;
         memo.Lines.Add(wagnummer+','''+datumstr[y+1]+''','''+wagomzet[y+1]+'''');
         if wagomzet[y+1] <> '' then
