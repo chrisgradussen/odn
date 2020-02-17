@@ -4,7 +4,7 @@
     <PathDelim Value="\"/>
     <Version Value="10"/>
     <BuildModes Active="Debug"/>
-    <Units Count="27">
+    <Units Count="7">
       <Unit0>
         <Filename Value="odn.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -19,8 +19,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="463"/>
-        <CursorPos X="71" Y="490"/>
+        <TopLine Value="330"/>
+        <CursorPos X="59" Y="339"/>
         <UsageCount Value="205"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -31,7 +31,7 @@
         <ComponentName Value="DM"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <EditorIndex Value="11"/>
+        <EditorIndex Value="2"/>
         <TopLine Value="81"/>
         <CursorPos X="67" Y="90"/>
         <UsageCount Value="204"/>
@@ -47,7 +47,7 @@
         <UnitName Value="InstellingenUnit"/>
         <TopLine Value="62"/>
         <CursorPos X="65" Y="75"/>
-        <UsageCount Value="131"/>
+        <UsageCount Value="492"/>
       </Unit3>
       <Unit4>
         <Filename Value="urenunit.pas"/>
@@ -58,301 +58,164 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="46"/>
         <CursorPos X="3" Y="49"/>
-        <UsageCount Value="99"/>
+        <UsageCount Value="460"/>
       </Unit4>
       <Unit5>
-        <Filename Value="C:\lazarus_10\fpspreadsheet\fpspreadsheet.pas"/>
-        <TopLine Value="994"/>
-        <CursorPos Y="1007"/>
-        <UsageCount Value="9"/>
+        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\lazarus-ccr-svn\components\fpspreadsheet\source\common\fpspreadsheet.pas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="8259"/>
+        <CursorPos Y="8271"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
       </Unit5>
       <Unit6>
-        <Filename Value="C:\lazarus_10\zeoslib\src\dbc\ZDbcInterbase6Utils.pas"/>
-        <TopLine Value="835"/>
-        <CursorPos X="21" Y="838"/>
-        <UsageCount Value="11"/>
-      </Unit6>
-      <Unit7>
-        <Filename Value="C:\lazarus_10\zeoslib\src\dbc\ZDbcUtils.pas"/>
-        <TopLine Value="318"/>
-        <CursorPos Y="328"/>
-        <UsageCount Value="10"/>
-      </Unit7>
-      <Unit8>
-        <Filename Value="C:\lazarus_120\components\lazarus-ccr-svn\components\rx\trunk\tooledit.pas"/>
-        <TopLine Value="793"/>
-        <CursorPos X="26" Y="805"/>
-        <UsageCount Value="2"/>
-      </Unit8>
-      <Unit9>
-        <Filename Value="mainunit.lfm"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <ExtraEditorCount Value="2"/>
-        <ExtraEditor1>
-          <TopLine Value="198"/>
-          <CursorPos X="210712" Y="218"/>
-        </ExtraEditor1>
-        <ExtraEditor2>
-          <TopLine Value="6"/>
-          <CursorPos X="54" Y="17"/>
-        </ExtraEditor2>
-        <UsageCount Value="18"/>
-        <DefaultSyntaxHighlighter Value="LFM"/>
-      </Unit9>
-      <Unit10>
-        <Filename Value="C:\lazarus_120\components\ZEOSDBO-7.1.3a-stable\src\plain\ZPlainLoader.pas"/>
-        <TopLine Value="261"/>
-        <CursorPos X="41" Y="275"/>
-        <UsageCount Value="12"/>
-      </Unit10>
-      <Unit11>
-        <Filename Value="C:\lazarus_126\components\zeosdbo\src\ZeosLazarus.inc"/>
-        <TopLine Value="120"/>
-        <UsageCount Value="4"/>
-      </Unit11>
-      <Unit12>
-        <Filename Value="C:\lazarus_126\components\zeosdbo\src\Zeos.inc"/>
-        <TopLine Value="389"/>
-        <CursorPos X="5" Y="396"/>
-        <UsageCount Value="4"/>
-      </Unit12>
-      <Unit13>
-        <Filename Value="C:\lazarus_126\components\zeosdbo\src\component\ZAbstractConnection.pas"/>
-        <TopLine Value="940"/>
-        <CursorPos Y="950"/>
-        <UsageCount Value="10"/>
-      </Unit13>
-      <Unit14>
-        <Filename Value="..\..\..\usr\share\lazarus\1.2.6\components\lazarus-ccr-svn\components\fpspreadsheet\fpsallformats.pas"/>
-        <CursorPos X="16" Y="13"/>
-        <UsageCount Value="6"/>
-      </Unit14>
-      <Unit15>
-        <Filename Value="..\..\..\usr\share\lazarus\1.2.6\components\lazarus-ccr-svn\components\fpspreadsheet\xlsbiff5.pas"/>
-        <TopLine Value="312"/>
-        <CursorPos X="45" Y="334"/>
-        <UsageCount Value="6"/>
-      </Unit15>
-      <Unit16>
-        <Filename Value="..\..\..\usr\share\lazarus\1.2.6\components\lazarus-ccr-svn\components\fpspreadsheet\fpszipper.pp"/>
-        <TopLine Value="1777"/>
-        <CursorPos X="11" Y="1788"/>
-        <UsageCount Value="5"/>
-      </Unit16>
-      <Unit17>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\lazarus-ccr-svn\components\fpspreadsheet\source\common\uvirtuallayer_stream.pas"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="82"/>
-        <CursorPos Y="100"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-      </Unit17>
-      <Unit18>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\lazarus-ccr-svn\components\fpspreadsheet\source\common\uvirtuallayer.pas"/>
-        <EditorIndex Value="5"/>
-        <TopLine Value="812"/>
-        <CursorPos Y="833"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-      </Unit18>
-      <Unit19>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\lazarus-ccr-svn\components\fpspreadsheet\source\common\fpolebasic.pas"/>
-        <EditorIndex Value="6"/>
-        <TopLine Value="124"/>
-        <CursorPos Y="147"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-      </Unit19>
-      <Unit20>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\lazarus-ccr-svn\components\fpspreadsheet\source\common\xlsbiff5.pas"/>
-        <EditorIndex Value="7"/>
-        <TopLine Value="932"/>
-        <CursorPos Y="952"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-      </Unit20>
-      <Unit21>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\lazarus-ccr-svn\components\fpspreadsheet\source\common\fpsreaderwriter.pas"/>
-        <UnitName Value="fpsReaderWriter"/>
-        <EditorIndex Value="8"/>
-        <TopLine Value="477"/>
-        <CursorPos Y="493"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-      </Unit21>
-      <Unit22>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\lazarus-ccr-svn\components\fpspreadsheet\source\common\fpspreadsheet.pas"/>
-        <EditorIndex Value="9"/>
-        <TopLine Value="8249"/>
-        <CursorPos Y="8271"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-      </Unit22>
-      <Unit23>
         <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\lazarus-ccr-svn\components\fpspreadsheet\source\visual\fpspreadsheetctrls.pas"/>
-        <EditorIndex Value="10"/>
-        <TopLine Value="1099"/>
-        <CursorPos Y="1113"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-      </Unit23>
-      <Unit24>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\lazarus-ccr-svn\components\fpspreadsheet\source\common\fpstypes.pas"/>
-        <UnitName Value="fpsTypes"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="8"/>
-        <CursorPos X="46" Y="22"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-      </Unit24>
-      <Unit25>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\zeosdbo\src\dbc\ZDbcInterbase6Utils.pas"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="821"/>
-        <CursorPos Y="835"/>
-        <UsageCount Value="19"/>
-        <Loaded Value="True"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit25>
-      <Unit26>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\zeosdbo\src\dbc\ZDbcUtils.pas"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="325"/>
-        <CursorPos Y="339"/>
-        <UsageCount Value="19"/>
-        <Loaded Value="True"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit26>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1035"/>
+        <CursorPos X="18" Y="1048"/>
+        <UsageCount Value="10"/>
+      </Unit6>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="dataunit.pas"/>
-        <Caret Line="85" Column="3" TopLine="83"/>
+        <Filename Value="mainunit.pas"/>
+        <Caret Line="349" Column="24" TopLine="326"/>
       </Position1>
       <Position2>
-        <Filename Value="dataunit.pas"/>
-        <Caret Line="86" Column="3" TopLine="84"/>
+        <Filename Value="mainunit.pas"/>
+        <Caret Line="352" Column="6" TopLine="333"/>
       </Position2>
       <Position3>
-        <Filename Value="dataunit.pas"/>
-        <Caret Line="89" Column="3" TopLine="87"/>
+        <Filename Value="mainunit.pas"/>
+        <Caret Line="335" Column="7" TopLine="317"/>
       </Position3>
       <Position4>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="377" Column="51" TopLine="352"/>
+        <Caret Line="332" Column="67" TopLine="318"/>
       </Position4>
       <Position5>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="372" Column="64" TopLine="358"/>
+        <Caret Line="108" Column="4" TopLine="94"/>
       </Position5>
       <Position6>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="374" Column="35" TopLine="360"/>
+        <Caret Line="332" Column="50" TopLine="318"/>
       </Position6>
       <Position7>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="377" Column="25" TopLine="363"/>
+        <Caret Line="320" Column="63" TopLine="315"/>
       </Position7>
       <Position8>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\zeosdbo\src\dbc\ZDbcInterbase6Utils.pas"/>
-        <Caret Line="835" TopLine="821"/>
+        <Filename Value="mainunit.pas"/>
+        <Caret Line="330" Column="3" TopLine="321"/>
       </Position8>
       <Position9>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\zeosdbo\src\dbc\ZDbcUtils.pas"/>
-        <Caret Line="339" TopLine="325"/>
+        <Filename Value="mainunit.pas"/>
+        <Caret Line="490" Column="71" TopLine="463"/>
       </Position9>
       <Position10>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="312" Column="21" TopLine="301"/>
+        <Caret Line="473" Column="22" TopLine="463"/>
       </Position10>
       <Position11>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="308" Column="20" TopLine="289"/>
+        <Caret Line="474" Column="22" TopLine="464"/>
       </Position11>
       <Position12>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="330" Column="5" TopLine="319"/>
+        <Caret Line="633" Column="5" TopLine="628"/>
       </Position12>
       <Position13>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="328" Column="24" TopLine="312"/>
+        <Caret Line="330" TopLine="307"/>
       </Position13>
       <Position14>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\zeosdbo\src\dbc\ZDbcInterbase6Utils.pas"/>
-        <Caret Line="835" TopLine="821"/>
+        <Filename Value="mainunit.pas"/>
+        <Caret Line="630" Column="16" TopLine="618"/>
       </Position14>
       <Position15>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\zeosdbo\src\dbc\ZDbcUtils.pas"/>
-        <Caret Line="339" TopLine="325"/>
+        <Filename Value="mainunit.pas"/>
+        <Caret Line="632" Column="16" TopLine="619"/>
       </Position15>
       <Position16>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\zeosdbo\src\dbc\ZDbcInterbase6Utils.pas"/>
-        <Caret Line="835" TopLine="821"/>
+        <Filename Value="mainunit.pas"/>
+        <Caret Line="285" Column="28" TopLine="285"/>
       </Position16>
       <Position17>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\zeosdbo\src\dbc\ZDbcUtils.pas"/>
-        <Caret Line="339" TopLine="325"/>
+        <Filename Value="mainunit.pas"/>
+        <Caret Line="683" TopLine="681"/>
       </Position17>
       <Position18>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\zeosdbo\src\dbc\ZDbcInterbase6Utils.pas"/>
-        <Caret Line="835" TopLine="821"/>
+        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\lazarus-ccr-svn\components\fpspreadsheet\source\common\fpspreadsheet.pas"/>
+        <Caret Line="988" TopLine="975"/>
       </Position18>
       <Position19>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\zeosdbo\src\dbc\ZDbcUtils.pas"/>
-        <Caret Line="339" TopLine="325"/>
+        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\lazarus-ccr-svn\components\fpspreadsheet\source\common\fpspreadsheet.pas"/>
+        <Caret Line="8271" TopLine="8259"/>
       </Position19>
       <Position20>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\zeosdbo\src\dbc\ZDbcInterbase6Utils.pas"/>
-        <Caret Line="835" TopLine="821"/>
+        <Filename Value="mainunit.pas"/>
+        <Caret Line="335" TopLine="325"/>
       </Position20>
       <Position21>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\zeosdbo\src\dbc\ZDbcUtils.pas"/>
-        <Caret Line="339" TopLine="325"/>
+        <Filename Value="mainunit.pas"/>
+        <Caret Line="334" TopLine="325"/>
       </Position21>
       <Position22>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="328" Column="25" TopLine="312"/>
+        <Caret Line="335" TopLine="325"/>
       </Position22>
       <Position23>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="349" Column="24" TopLine="326"/>
+        <Caret Line="337" TopLine="325"/>
       </Position23>
       <Position24>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="352" Column="6" TopLine="333"/>
+        <Caret Line="339" TopLine="325"/>
       </Position24>
       <Position25>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="335" Column="7" TopLine="317"/>
+        <Caret Line="408" TopLine="396"/>
       </Position25>
       <Position26>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="332" Column="67" TopLine="318"/>
+        <Caret Line="506" TopLine="506"/>
       </Position26>
       <Position27>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="108" Column="4" TopLine="94"/>
+        <Caret Line="334" TopLine="322"/>
       </Position27>
       <Position28>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="332" Column="50" TopLine="318"/>
+        <Caret Line="335" TopLine="322"/>
       </Position28>
       <Position29>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="320" Column="63" TopLine="315"/>
+        <Caret Line="337" TopLine="322"/>
       </Position29>
       <Position30>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="330" Column="3" TopLine="321"/>
+        <Caret Line="339" TopLine="322"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
   <Debugging>
-    <Watches Count="1">
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainunit.pas"/>
+        <Line Value="334"/>
+      </Item1>
+    </BreakPoints>
+    <Watches Count="2">
       <Item1>
         <Expression Value="datumstring"/>
       </Item1>
+      <Item2>
+        <Expression Value="zoekstring"/>
+      </Item2>
     </Watches>
   </Debugging>
 </CONFIG>

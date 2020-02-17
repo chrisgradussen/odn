@@ -20,6 +20,7 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    Button4: TButton;
     R10Button: TButton;
     DatasourceAfdelingInfo: TDatasource;
     DatasourceDaginfoNieuw: TDataSource;
@@ -335,7 +336,7 @@ begin
   begin
     zoekstring :=  somzetgrid.Worksheet.FindCell(1,13)^.UTF8StringValue;
   end;
-  if pos('OPE1010 - Omzet totaal',zoekstring) = 1 then
+  if ((pos('OPE1010 - Omzet totaal',zoekstring)  = 1) or (pos('OPE1010 - Omzet Totaal',zoekstring)  = 1)) then
   begin
    // showmessage(' ik ben binnen');
     //load datum
@@ -625,7 +626,13 @@ begin
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
+var
+   i : integer;
 begin
+  for i := 0 to 52 do
+  begin
+
+ {
   dm.ZAfdelinginfo.Close;
   dm.ZConnection.Commit;
   if dm.ZAfdelinginfo.params.Count = 1 then
@@ -633,7 +640,9 @@ begin
   dm.ZAfdelinginfo.Active:= true;
   weekinfo.LoadFromFile(Instellingenunit.FormInstellingen.EditAfdelingRapport.text);
   //weekinfo.LoadFromFile('C:\Users\chrgra\Documents\Projecten\ODN\reports\afdelinginfo.lrf');
-  Weekinfo.ShowReport;
+  Weekinfo.ShowReport;}
+
+  end;
 end;
 
 procedure TForm1.Button4Click(Sender: TObject);
