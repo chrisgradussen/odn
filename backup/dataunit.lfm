@@ -420,7 +420,7 @@ object DM: TDM
         ParamType = ptUnknown
       end    
       item
-        DataType = ftUnknown
+        DataType = ftString
         Name = 'OMSCHRIJVING'
         ParamType = ptUnknown
       end>

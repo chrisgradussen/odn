@@ -21,6 +21,7 @@ type
     ZAfdelingUrenUREN: TFloatField;
     ZConnection: TZConnection;
     ZDaginfoNieuw: TZQuery;
+    ZOmzetgegevensDelete: TZSQLProcessor;
     ZWagAdd: TZSQLProcessor;
     ZPMTInfo: TZQuery;
     ZJaarweek: TZQuery;

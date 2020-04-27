@@ -81,6 +81,8 @@ type
     { public declarations }
     procedure leesomzetspreadsheet(filename : string);
     procedure leesomzetR10(filename : string);
+    procedure leesOPE1010;
+    procedure leesomzetopdatum;
   end;
 
 var
@@ -93,6 +95,203 @@ uses instellingenunit;
 {$R *.lfm}
 
 { TForm1 }
+
+{ Leesomzetopdatum
+R10 OPE1010 omzet op presentatiegroep, drillen op datum, exporteren als flat excel
+}
+
+procedure TForm1.leesomzetopdatum;
+var
+   datumstr        : string;
+   mindatum        : tdatetime;
+   maxdatum        : tdatetime;
+   wagnummer       : string;
+   wagomschrijving : string;
+   wagomzet        : array[1..7] of string;
+   i,y             : integer;
+   omzetgroep      : string;
+   l_decimalseparator : char;
+   datumstring     : string;
+   waarde          : string;
+
+begin
+  // eerst alle oude datums verwijderen
+  i := 3;
+  mindatum := 0;
+  maxdatum := 0;
+  while assigned(somzetgrid.worksheet.findcell(i,0)) do
+  begin
+    if  (pos('Totaal' ,somzetgrid.worksheet.findcell(i,0)^.UTF8StringValue)= 1) then
+    begin
+      if ((mindatum <> 0) and (maxdatum <> 0)) then
+      begin
+        //data verwijderen....
+       // showmessage ('mindatum : ' + datetimetostr(mindatum) + ' maxdatum : ' +datetimetostr(maxdatum));
+        dm.ZOmzetgegevensDelete.ParamByName('mindatum').AsDate:= mindatum;
+        dm.ZOmzetgegevensDelete.ParamByName('maxdatum').AsDate:= maxdatum;
+        dm.ZOmzetgegevensDelete.Execute;
+        dm.ZOmzetgegevensDelete.Connection.Commit;
+
+      end;
+      break;
+    end;
+    if ((mindatum = 0) and (maxdatum = 0)) then
+    begin
+      mindatum := somzetgrid.worksheet.findcell(i,2)^.DateTimeValue;
+      maxdatum :=somzetgrid.worksheet.findcell(i,2)^.DateTimeValue;
+    end
+    else
+    begin
+      if somzetgrid.worksheet.findcell(i,2)^.DateTimeValue  < mindatum then
+        mindatum := somzetgrid.worksheet.findcell(i,2)^.DateTimeValue;
+      if somzetgrid.worksheet.findcell(i,2)^.DateTimeValue > maxdatum then
+        maxdatum := somzetgrid.worksheet.findcell(i,2)^.DateTimeValue;
+    end;
+    inc(i);
+  end;
+  //omzetgegevens toevoegen
+  i := 3;
+  while assigned(somzetgrid.worksheet.findcell(i,0)) do
+  begin
+    if  (pos('Totaal' ,somzetgrid.worksheet.findcell(i,0)^.UTF8StringValue)= 1) then
+    begin
+      break;
+    end;
+   { for y := 0 to 3 do
+    begin
+      showmessage(inttostr(y) + '  '  + somzetgrid.worksheet.findcell(i,y)^.UTF8StringValue);
+      case  somzetgrid.worksheet.findcell(i,y)^.ContentType of
+         cctnumber : showmessage(' number' );
+         cctUTF8String  : showmessage(' string');
+         cctDateTime : showmessage('datetime');
+      end;
+    end;   }
+    dm.ZOmzetgegevensAdd.ParamByName('datum').asdatetime := somzetgrid.worksheet.findcell(i,2)^.DateTimeValue;
+    dm.ZOmzetgegevensAdd.ParamByName('wag_id').AsInteger:= strtoint(somzetgrid.worksheet.findcell(i,0)^.UTF8StringValue);
+    dm.ZOmzetgegevensAdd.ParamByName('waarde').AsFloat:= somzetgrid.worksheet.findcell(i,3)^.NumberValue;
+   // showmessage(dm.zomzetgegevensadd.parambyname('datum').AsString + '   '  +dm.zomzetgegevensadd.parambyname('wag_id').AsString + '  '  + dm.zomzetgegevensadd.parambyname('waarde').asstring);
+    dm.ZOmzetgegevensAdd.Execute;
+    dm.ZOmzetgegevensAdd.Connection.Commit;
+    inc(i);
+  end;
+  {
+      mindatum := 0;
+      maxdatum := 0;
+      for i := 2 to somzetgrid.RowCount-1 do
+      //for i := 2 to 10 do
+      begin
+        if assigned(somzetgrid.worksheet.findcell(i,0)) then
+        begin
+         // memo.lines.add(somzetgrid.worksheet.findcell(i,0)^.UTF8StringValue);
+          if (somzetgrid.worksheet.findcell(i,0)^.UTF8StringValue[1] in ['0'..'9']) then
+          begin
+            //showmessage('i : '+ inttostr(i) + ' ; y : '+ inttostr(y) + ' : ' +  floattostr(somzetgrid.worksheet.findcell(i,0)^.NumberValue));
+            //showmessage('dateseparator is : "' + dateseparator+'" celinhoud is : "'+somzetgrid.cells[0,i]+'"');
+            datumstring := somzetgrid.worksheet.findcell(i,0)^.UTF8StringValue;
+            datumstring[3] := dateseparator;
+            datumstring[6] := dateseparator;
+            if ((mindatum = 0) and (maxdatum = 0)) then
+            begin
+              mindatum := strtodate(datumstring);
+              maxdatum := strtodate(datumstring);
+            end
+            else
+            begin
+              if strtodate(datumstring) < mindatum then
+                mindatum := strtodate(datumstring);
+               if strtodate(datumstring) > maxdatum then
+                maxdatum := strtodate(datumstring);
+            end;
+          end;
+        end;
+      end;
+      if mindatum <> 0 then
+      begin
+        dm.ZVoorraadcorrectiesDelete.ParamByName('mindatum').AsDate:= mindatum;
+        dm.ZVoorraadcorrectiesDelete.ParamByName('maxdatum').AsDate:= maxdatum;
+        dm.ZVoorraadcorrectiesDelete.Execute;
+        dm.ZVoorraadcorrectiesDelete.Connection.Commit;
+
+     //   dm.ZvoorraadcorrectiesQuery.ApplyUpdates;
+     //   dm.zvoorraadcorre
+      //  dm.ZvoorraadcorrectiesQuery.CommitUpdates;
+      end;
+      memo.Lines.Add('mindatum is : ' + datetostr(mindatum));
+      memo.Lines.Add('maxdatum is : ' + datetostr(maxdatum));
+
+      for i := 2 to somzetgrid.RowCount -1 do
+  {for debug enabled*/} //   for i := 2 to 10 do
+      begin
+        if assigned(somzetgrid.worksheet.findcell(i,0)) then
+        begin
+          if not (somzetgrid.worksheet.findcell(i,0)^.UTF8StringValue[1] in ['0'..'9']) then
+          begin
+             memo.lines.add(somzetgrid.worksheet.findcell(i,0)^.UTF8StringValue);
+             omzetgroep := somzetgrid.worksheet.findcell(i,0)^.UTF8StringValue;
+             omzetgroep := copy(omzetgroep,3,length(omzetgroep));
+          // showmessage('"'+omzetgroep+'"');
+
+          end
+          else
+          begin
+            if dm.ZvoorraadcorrectiesQuery.Active then
+            dm.ZvoorraadcorrectiesQuery.close;
+            dm.ZVoorraadCorrectiesQuery.ParamByName('omzetgroep').AsString:= omzetgroep;
+            dm.ZVoorraadCorrectiesQuery.ParamByName('soort').AsString:= somzetgrid.worksheet.findcell(i,5)^.UTF8StringValue;
+           // showmessage(dm.zvoorraadcorrectiesquery.parambyname('soort').asstring);
+            datumstring := somzetgrid.worksheet.findcell(i,0)^.UTF8StringValue;
+            datumstring[3] := dateseparator;
+            datumstring[6] := dateseparator;
+
+            dm.ZVoorraadCorrectiesQuery.ParamByName('datum').AsDate:= strtodate(datumstring);
+           // showmessage(dm.zvoorraadcorrectiesquery.parambyname('datum').asstring);
+            dm.ZVoorraadCorrectiesQuery.ParamByName('artikelnummer').AsInteger:= round(somzetgrid.worksheet.findcell(i,1)^.NumberValue);
+           // showmessage(dm.zvoorraadcorrectiesquery.parambyname('artikelnummer').asstring);
+            dm.ZVoorraadCorrectiesQuery.ParamByName('omschrijving').AsString:= somzetgrid.worksheet.findcell(i,2)^.UTF8StringValue;
+           // showmessage(dm.zvoorraadcorrectiesquery.parambyname('omschrijving').asstring);
+    //        dm.ZVoorraadCorrectiesQuery.ParamByName('aantal').AsFloat:= strtofloat(StringReplace(somzetgrid.worksheet.findcell(i,3)^.NumberValue, ' ', '',[rfReplaceAll, rfIgnoreCase]))/1000;
+            dm.ZVoorraadCorrectiesQuery.ParamByName('aantal').AsFloat:= somzetgrid.worksheet.findcell(i,3)^.NumberValue;
+            //somzetgrid.worksheet.findcell(i,3)^.ContentType:= tcellcontenttype.cctUTF8String;
+           // showmessage('aantal is : '+ floattostr(somzetgrid.worksheet.findcell(i,3)^.NumberValue));
+          //  floattostr(dm.zvoorraadcorrectiesquery.parambyname('aantal').asfloat));
+          //  waarde := somzetgrid.worksheet.findcell(i,6)^.NumberValue;
+         //   waarde := StringReplace(waarde, ' ', '',[rfReplaceAll, rfIgnoreCase]);
+           // waarde := StringReplace(waarde, '.', '',[rfReplaceAll, rfIgnoreCase]);
+            dm.ZVoorraadCorrectiesQuery.ParamByName('waarde').AsFloat:=
+              -somzetgrid.worksheet.findcell(i,6)^.NumberValue;
+            dm.ZvoorraadcorrectiesQuery.Active:= true;
+            dm.ZvoorraadcorrectiesQuery.ApplyUpdates;
+            dm.ZvoorraadcorrectiesQuery.CommitUpdates;
+            memo.Lines.Add('"'+dm.ZvoorraadcorrectiesQuery.FieldByName('oomzetgroep').AsString+'"');
+            memo.Lines.Add('"'+dm.ZvoorraadcorrectiesQuery.FieldByName('osoort').AsString+'"');
+            memo.Lines.Add('"'+dm.ZvoorraadcorrectiesQuery.FieldByName('oartikelnummer').AsString+'"');
+            memo.Lines.Add('"'+dm.ZvoorraadcorrectiesQuery.FieldByName('oomschrijving').AsString+'"');
+            memo.Lines.Add('"'+dm.ZvoorraadcorrectiesQuery.FieldByName('oaantal').AsString+'"');
+            memo.Lines.Add('"'+dm.ZvoorraadcorrectiesQuery.FieldByName('owaarde').AsString+'"');
+            memo.Lines.Add('"'+dm.ZvoorraadcorrectiesQuery.FieldByName('omzetgroep_id').AsString+'"');
+            memo.Lines.Add('"'+dm.ZvoorraadcorrectiesQuery.FieldByName('soort_id').AsString+'"');
+            {dm.ZVoorraadCorrectiesAdd.ParamByName('omzetgroep').AsString:= omzetgroep;
+            dm.ZVoorraadCorrectiesAdd.ParamByName('soort').AsString:= somzetgrid.cells[5,i];
+            dm.ZVoorraadCorrectiesAdd.ParamByName('artikelnummer').AsInteger:= strtoint(somzetgrid.cells[1,i]);
+            dm.ZVoorraadCorrectiesAdd.ParamByName('omschrijving').AsString:= somzetgrid.cells[2,i];
+            dm.ZVoorraadCorrectiesAdd.ParamByName('aantal').AsFloat:= strtofloat(StringReplace(somzetgrid.cells[3,i], ' ', '',[rfReplaceAll, rfIgnoreCase]))/1000;
+            dm.ZVoorraadCorrectiesAdd.ParamByName('waarde').AsFloat:= strtofloat(
+            StringReplace(somzetgrid.cells[6,i], ' ', '',[rfReplaceAll, rfIgnoreCase]));
+
+            dm.ZVoorraadCorrectiesAdd.Execute;}
+          end;
+        end;
+      end;
+      memo.Lines.add('KLAAR');;
+      dm.ZConnection.commit;
+    end
+    else
+      showmessage('Onbekend soort spreadsheet');
+ //   showmessage(inttostr(pos('Weekoverzicht Van :',somzetgrid.Cells[0,0])));
+  end;}
+end;
+
+
 
 procedure TForm1.leesomzetspreadsheet(filename : string);
 var
@@ -331,77 +530,25 @@ begin
   //showmessage(somzetgrid.worksheet.findcell(2,13)^.UTF8StringValue);
   //showmessage(somzetgrid.worksheet.findcell(6,2)^.utf8stringvalue);
  // somzetgrid.Worksheet.Cells[1,1] := 'hallo';
-  zoekstring := '' ;
+ zoekstring := '' ;
+  if assigned(somzetgrid.Worksheet.FindCell(0,0)) then
+ begin
+   zoekstring :=  somzetgrid.Worksheet.FindCell(0,0)^.UTF8StringValue;
+ end;
+ if (pos('OPE1010 - Vestiging Omzet totaal->Datum',zoekstring)  = 1) then
+ begin
+   leesomzetopdatum;
+   exit;
+ end;
+ showmessage('na leesomzetopdatum, verder zoeken');
+   zoekstring := '' ;
   if assigned(somzetgrid.Worksheet.FindCell(1,13)) then
   begin
     zoekstring :=  somzetgrid.Worksheet.FindCell(1,13)^.UTF8StringValue;
   end;
   if ((pos('OPE1010 - Omzet totaal',zoekstring)  = 1) or (pos('OPE1010 - Omzet Totaal',zoekstring)  = 1)) then
   begin
-   // showmessage(' ik ben binnen');
-    //load datum
-    for i := 0 to 0 do
-    begin
-    //  showmessage(somzetgrid.worksheet.findcell(11,4+2*i)^.UTF8StringValue);
-      datumstr[i+1] := copy(somzetgrid.worksheet.findcell(5,2)^.UTF8StringValue,9,10);
-      datumstr[i+1][3] := dateseparator;
-      if datumstr[i+1][6] = '-' then
-      begin
-        datumstr[i+1][6] := dateseparator;
-      end
-      else
-      begin
-        datumstr[i+1] := copy(somzetgrid.worksheet.findcell(5,2)^.UTF8StringValue,9,9);
-        datumstr[i+1][3] := dateseparator;
-        datumstr[i+1][5] := dateseparator;
-      end  ;
-
-    end;
-    //load groep number
-    i := 0;
-    //while assigned(somzetgrid.worksheet.findcell(16+i,0)) do
-   // while somzetgrid.worksheet.findcell(16+i,0)^.UTF8StringValue <> '' do
-    while pos('Totaal',somzetgrid.Worksheet.FindCell(14+i,2)^.UTF8StringValue) <> 1 do
-    begin
-      wagnummer := copy(somzetgrid.worksheet.findcell(14+i,2)^.UTF8StringValue,1,4);
-      wagomschrijving := copy(somzetgrid.worksheet.findcell(14+i,5)^.UTF8StringValue,6,100);
-      for y := 0 to 0 do
-      begin
-        wagomzet[y+1] := '';
-        if somzetgrid.worksheet.findcell(14+i,9) <> nil then
-        begin
-        //  showmessage('i : '+ inttostr(i) + ' ; y : '+ inttostr(y) + ' : ' +  floattostr(somzetgrid.worksheet.findcell(16+i,3+2*y)^.NumberValue));
-          wagomzet[y+1] := floattostr(somzetgrid.worksheet.findcell(14+i,9)^.NumberValue);
-        end;
-        memo.Lines.Add(wagnummer+','''+datumstr[y+1]+''','''+wagomzet[y+1]+'''');
-        if wagomzet[y+1] <> '' then
-        begin
-        //  datumstr[y+1,3] := dateseparator;
-        //  datumstr[y+1,6] := dateseparator;
-          dm.ZOmzetgegevensAdd.ParamByName('datum').asdatetime:= strtodate(datumstr[y+1]);
-          dm.ZOmzetgegevensAdd.ParamByName('wag_id').AsInteger:= strtoint(wagnummer);
-          dm.ZOmzetgegevensAdd.ParamByName('waarde').AsFloat:= strtofloat(wagomzet[y+1]);
-          try
-          dm.ZOmzetgegevensAdd.Execute;
-          except
-          try
-            dm.ZWagAdd.ParamByName('wag_id').asinteger := strtoint(wagnummer);
-            dm.ZWagAdd.ParamByName('omschrijving').AsString := (wagomschrijving);
-            dm.ZWagAdd.Execute;
-            dm.ZWagAdd.connection.commit;
-            dm.ZOmzetgegevensAdd.Execute;
-          except
-            showmessage('iets fout met wagnummer');
-          end;
-          end;
-          dm.ZOmzetgegevensAdd.Connection.Commit;
-        end;
-      end;
-      //showmessage('voor inc i : '+ inttostr(i) +' wagnummer : '+ wagnummer);
-      inc(i);
-      //showmessage('na inc i : '+ inttostr(i)  +' wagnummer : '+ wagnummer);
-    end;
-    //showmessage('na while loop')
+    leesOPE1010;;
   end
   else
   begin
@@ -521,8 +668,90 @@ begin
     else
       showmessage('Onbekend soort spreadsheet');
  //   showmessage(inttostr(pos('Weekoverzicht Van :',somzetgrid.Cells[0,0])));
-  end;
+  end
 end;
+
+procedure Tform1.leesOPE1010();
+var
+  datumstr        : array[1..7] of string;
+  mindatum        : tdatetime;
+  maxdatum        : tdatetime;
+  wagnummer       : string;
+  wagomschrijving : string;
+  wagomzet        : array[1..7] of string;
+  i,y             : integer;
+  omzetgroep      : string;
+  l_decimalseparator : char;
+  datumstring     : string;
+  waarde          : string;
+  zoekstring      : string;
+begin
+  for i := 0 to 0 do
+  begin
+    //  showmessage(somzetgrid.worksheet.findcell(11,4+2*i)^.UTF8StringValue);
+    datumstr[i+1] := copy(somzetgrid.worksheet.findcell(5,2)^.UTF8StringValue,9,10);
+    datumstr[i+1][3] := dateseparator;
+    if datumstr[i+1][6] = '-' then
+    begin
+      datumstr[i+1][6] := dateseparator;
+    end
+    else
+    begin
+      datumstr[i+1] := copy(somzetgrid.worksheet.findcell(5,2)^.UTF8StringValue,9,9);
+      datumstr[i+1][3] := dateseparator;
+      datumstr[i+1][5] := dateseparator;
+    end  ;
+  end;
+  //load groep number
+  i := 0;
+  //while assigned(somzetgrid.worksheet.findcell(16+i,0)) do
+  // while somzetgrid.worksheet.findcell(16+i,0)^.UTF8StringValue <> '' do
+  while pos('Totaal',somzetgrid.Worksheet.FindCell(14+i,2)^.UTF8StringValue) <> 1 do
+  begin
+    wagnummer := copy(somzetgrid.worksheet.findcell(14+i,2)^.UTF8StringValue,1,4);
+    wagomschrijving := copy(somzetgrid.worksheet.findcell(14+i,5)^.UTF8StringValue,6,100);
+    for y := 0 to 0 do
+    begin
+      wagomzet[y+1] := '';
+      if somzetgrid.worksheet.findcell(14+i,9) <> nil then
+      begin
+      //  showmessage('i : '+ inttostr(i) + ' ; y : '+ inttostr(y) + ' : ' +  floattostr(somzetgrid.worksheet.findcell(16+i,3+2*y)^.NumberValue));
+        wagomzet[y+1] := floattostr(somzetgrid.worksheet.findcell(14+i,9)^.NumberValue);
+      end;
+      memo.Lines.Add(wagnummer+','''+datumstr[y+1]+''','''+wagomzet[y+1]+'''');
+      if wagomzet[y+1] <> '' then
+      begin
+      //  datumstr[y+1,3] := dateseparator;
+      //  datumstr[y+1,6] := dateseparator;
+        dm.ZOmzetgegevensAdd.ParamByName('datum').asdatetime:= strtodate(datumstr[y+1]);
+        dm.ZOmzetgegevensAdd.ParamByName('wag_id').AsInteger:= strtoint(wagnummer);
+        dm.ZOmzetgegevensAdd.ParamByName('waarde').AsFloat:= strtofloat(wagomzet[y+1]);
+        try
+          dm.ZOmzetgegevensAdd.Execute;
+        except
+          try
+            dm.ZWagAdd.ParamByName('wag_id').asinteger := strtoint(wagnummer);
+            dm.ZWagAdd.ParamByName('omschrijving').AsString := (wagomschrijving);
+            dm.ZWagAdd.Execute;
+            dm.ZWagAdd.connection.commit;
+            dm.ZOmzetgegevensAdd.Execute;
+          except
+            showmessage('iets fout met wagnummer');
+          end;
+        end;
+        dm.ZOmzetgegevensAdd.Connection.Commit;
+      end;
+    end;
+      //showmessage('voor inc i : '+ inttostr(i) +' wagnummer : '+ wagnummer);
+    inc(i);
+     //showmessage('na inc i : '+ inttostr(i)  +' wagnummer : '+ wagnummer);
+  end;
+    //showmessage('na while loop')
+end;
+
+
+
+
 
 procedure TForm1.buttonomzetClick(Sender: TObject);
 begin
