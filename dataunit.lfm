@@ -67,8 +67,8 @@ object DM: TDM
     )
     Connection = ZConnection
     Delimiter = ';'
-    left = 53
-    top = 70
+    left = 72
+    top = 72
   end
   object ZAfdeling: TZQuery
     Connection = ZConnection

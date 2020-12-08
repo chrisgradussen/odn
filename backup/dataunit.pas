@@ -21,6 +21,7 @@ type
     ZAfdelingUrenUREN: TFloatField;
     ZConnection: TZConnection;
     ZDaginfoNieuw: TZQuery;
+    ZOmzetgegevensDelete: TZSQLProcessor;
     ZWagAdd: TZSQLProcessor;
     ZPMTInfo: TZQuery;
     ZJaarweek: TZQuery;
@@ -31,7 +32,7 @@ type
     ZvoorraadcorrectiesQuery: TZQuery;
     ZVoorraadcorrectiesAdd: TZSQLProcessor;
     ZWeekinfo: TZQuery;
-    ZOmzetgegevensAdd: TZSQLProcessor;
+    ZArtikelOmzetgegevensAdd: TZSQLProcessor;
     ZAfdeling: TZQuery;
     ZDaginfo: TZQuery;
     procedure DataModuleCreate(Sender: TObject);

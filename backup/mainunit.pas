@@ -126,7 +126,7 @@ begin
       if ((mindatum <> 0) and (maxdatum <> 0)) then
       begin
         //data verwijderen....
-        showmessage ('mindatum : ' + datetimetostr(mindatum) + ' maxdatum : ' +datetimetostr(maxdatum));
+       // showmessage ('mindatum : ' + datetimetostr(mindatum) + ' maxdatum : ' +datetimetostr(maxdatum));
         dm.ZOmzetgegevensDelete.ParamByName('mindatum').AsDate:= mindatum;
         dm.ZOmzetgegevensDelete.ParamByName('maxdatum').AsDate:= maxdatum;
         dm.ZOmzetgegevensDelete.Execute;
@@ -166,12 +166,12 @@ begin
          cctDateTime : showmessage('datetime');
       end;
     end;   }
-    dm.ZOmzetgegevensAdd.ParamByName('datum').asdatetime := somzetgrid.worksheet.findcell(i,2)^.DateTimeValue;
-    dm.ZOmzetgegevensAdd.ParamByName('wag_id').AsInteger:= strtoint(somzetgrid.worksheet.findcell(i,0)^.UTF8StringValue);
-    dm.ZOmzetgegevensAdd.ParamByName('waarde').AsFloat:= somzetgrid.worksheet.findcell(i,3)^.NumberValue;
+    dm.OmzetgegevensAdd.ParamByName('datum').asdatetime := somzetgrid.worksheet.findcell(i,2)^.DateTimeValue;
+    dm.OmzetgegevensAdd.ParamByName('wag_id').AsInteger:= strtoint(somzetgrid.worksheet.findcell(i,0)^.UTF8StringValue);
+    dm.OmzetgegevensAdd.ParamByName('waarde').AsFloat:= somzetgrid.worksheet.findcell(i,3)^.NumberValue;
    // showmessage(dm.zomzetgegevensadd.parambyname('datum').AsString + '   '  +dm.zomzetgegevensadd.parambyname('wag_id').AsString + '  '  + dm.zomzetgegevensadd.parambyname('waarde').asstring);
-    dm.ZOmzetgegevensAdd.Execute;
-    dm.ZOmzetgegevensAdd.Connection.Commit;
+    dm.OmzetgegevensAdd.Execute;
+    dm.OmzetgegevensAdd.Connection.Commit;
     inc(i);
   end;
   {

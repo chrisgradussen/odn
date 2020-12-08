@@ -1,11 +1,11 @@
 object DM: TDM
   OnCreate = DataModuleCreate
   OldCreateOrder = False
-  Height = 690
-  HorizontalOffset = 1338
-  VerticalOffset = 80
-  Width = 288
-  PPI = 96
+  Height = 697
+  HorizontalOffset = 1352
+  VerticalOffset = 81
+  Width = 511
+  PPI = 97
   object ZConnection: TZConnection
     ControlsCodePage = cCP_UTF8
     Properties.Strings = (
@@ -22,7 +22,7 @@ object DM: TDM
     User = 'sysdba'
     Password = 'masterkey'
     Protocol = 'firebirdd-2.5'
-    left = 52
+    left = 53
     top = 8
   end
   object ZWeekinfo: TZQuery
@@ -36,7 +36,7 @@ object DM: TDM
         Name = 'jaarweek'
         ParamType = ptUnknown
       end>
-    left = 200
+    left = 202
     top = 8
     ParamData = <    
       item
@@ -67,8 +67,8 @@ object DM: TDM
     )
     Connection = ZConnection
     Delimiter = ';'
-    left = 52
-    top = 69
+    left = 72
+    top = 72
   end
   object ZAfdeling: TZQuery
     Connection = ZConnection
@@ -77,8 +77,8 @@ object DM: TDM
       'select a.*, a.afdeling_id || ''  ''|| a.OMSCHRIJVING as ZOEKEN from afdeling a'
     )
     Params = <>
-    left = 200
-    top = 69
+    left = 202
+    top = 70
     object ZAfdelingAFDELING_ID: TLongintField
       FieldKind = fkData
       FieldName = 'AFDELING_ID'
@@ -106,8 +106,8 @@ object DM: TDM
       'select f_datetoyearweek(o.datum) as JAARWEEK from omzetgegevens o group by f_datetoyearweek(o.datum) order by f_datetoyearweek(o.datum)desc'
     )
     Params = <>
-    left = 200
-    top = 128
+    left = 202
+    top = 129
   end
   object ZVoorraadcorrectiesAdd: TZSQLProcessor
     Params = <    
@@ -146,8 +146,8 @@ object DM: TDM
     )
     Connection = ZConnection
     Delimiter = ';'
-    left = 52
-    top = 128
+    left = 53
+    top = 129
   end
   object ZvoorraadcorrectiesQuery: TZQuery
     Connection = ZConnection
@@ -190,7 +190,7 @@ object DM: TDM
         Name = 'waarde'
         ParamType = ptUnknown
       end>
-    left = 200
+    left = 360
     top = 184
     ParamData = <    
       item
@@ -246,8 +246,8 @@ object DM: TDM
     )
     Connection = ZConnection
     Delimiter = ';'
-    left = 52
-    top = 184
+    left = 72
+    top = 200
   end
   object ZDaginfo: TZQuery
     Connection = ZConnection
@@ -260,8 +260,8 @@ object DM: TDM
         Name = 'jaarweek'
         ParamType = ptUnknown
       end>
-    left = 200
-    top = 248
+    left = 202
+    top = 251
     ParamData = <    
       item
         DataType = ftUnknown
@@ -282,8 +282,8 @@ object DM: TDM
         Name = 'JAARWEEK'
         ParamType = ptUnknown
       end>
-    left = 200
-    top = 320
+    left = 202
+    top = 323
     ParamData = <    
       item
         DataType = ftUnknown
@@ -302,8 +302,8 @@ object DM: TDM
         Name = 'JAARWEEK'
         ParamType = ptUnknown
       end>
-    left = 208
-    top = 472
+    left = 210
+    top = 477
     ParamData = <    
       item
         DataType = ftUnknown
@@ -322,8 +322,8 @@ object DM: TDM
     MasterFields = 'AFDELING_ID'
     MasterSource = Form1.DatasourceAfdeling
     LinkedFields = 'AFDELING_ID'
-    left = 48
-    top = 320
+    left = 49
+    top = 323
   end
   object ZAfdelingUren: TZQuery
     Connection = ZConnection
@@ -338,8 +338,8 @@ object DM: TDM
     LinkedFields = 'JAARWEEK'
     UpdateMode = umUpdateAll
     WhereMode = wmWhereAll
-    left = 48
-    top = 472
+    left = 49
+    top = 477
     object ZAfdelingUrenJAARWEEK: TLongintField
       FieldKind = fkData
       FieldName = 'JAARWEEK'
@@ -403,8 +403,8 @@ object DM: TDM
         Name = 'jaarweek'
         ParamType = ptUnknown
       end>
-    left = 208
-    top = 536
+    left = 210
+    top = 542
     ParamData = <    
       item
         DataType = ftUnknown
@@ -435,7 +435,27 @@ object DM: TDM
     Connection = ZConnection
     Delimiter = ';'
     AfterExecute = ZWagAddAfterExecute
-    left = 52
-    top = 248
+    left = 53
+    top = 251
+  end
+  object ZOmzetgegevensDelete: TZSQLProcessor
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'mindatum'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'maxdatum'
+        ParamType = ptUnknown
+      end>
+    Script.Strings = (
+      'delete from omzetgegevens v where v.DATUM >= :mindatum and v.DATUM <= :maxdatum'
+    )
+    Connection = ZConnection
+    Delimiter = ';'
+    left = 96
+    top = 408
   end
 end
