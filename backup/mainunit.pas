@@ -166,12 +166,12 @@ begin
          cctDateTime : showmessage('datetime');
       end;
     end;   }
-    dm.OmzetgegevensAdd.ParamByName('datum').asdatetime := somzetgrid.worksheet.findcell(i,2)^.DateTimeValue;
-    dm.OmzetgegevensAdd.ParamByName('wag_id').AsInteger:= strtoint(somzetgrid.worksheet.findcell(i,0)^.UTF8StringValue);
-    dm.OmzetgegevensAdd.ParamByName('waarde').AsFloat:= somzetgrid.worksheet.findcell(i,3)^.NumberValue;
+    dm.ZOmzetgegevensAdd.ParamByName('datum').asdatetime := somzetgrid.worksheet.findcell(i,2)^.DateTimeValue;
+    dm.ZOmzetgegevensAdd.ParamByName('wag_id').AsInteger:= strtoint(somzetgrid.worksheet.findcell(i,0)^.UTF8StringValue);
+    dm.ZOmzetgegevensAdd.ParamByName('waarde').AsFloat:= somzetgrid.worksheet.findcell(i,3)^.NumberValue;
    // showmessage(dm.zomzetgegevensadd.parambyname('datum').AsString + '   '  +dm.zomzetgegevensadd.parambyname('wag_id').AsString + '  '  + dm.zomzetgegevensadd.parambyname('waarde').asstring);
-    dm.OmzetgegevensAdd.Execute;
-    dm.OmzetgegevensAdd.Connection.Commit;
+    dm.ZOmzetgegevensAdd.Execute;
+    dm.ZOmzetgegevensAdd.Connection.Commit;
     inc(i);
   end;
   {
@@ -535,7 +535,7 @@ begin
  begin
    zoekstring :=  somzetgrid.Worksheet.FindCell(0,0)^.UTF8StringValue;
  end;
- if (pos('OPE1010 - Vestiging Omzet totaal->Datum',zoekstring)  = 1) then
+ if (pos('OPE1010 - Vestiging Omzet totaal->Datum',zoekstring)  = 1) or (pos('OPE1010 - Omzet totaal->Datum',zoekstring)  = 1) then
  begin
    leesomzetopdatum;
    exit;

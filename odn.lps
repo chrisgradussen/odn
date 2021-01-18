@@ -2,7 +2,7 @@
 <CONFIG>
   <ProjectSession>
     <PathDelim Value="\"/>
-    <Version Value="10"/>
+    <Version Value="11"/>
     <BuildModes Active="Debug"/>
     <Units Count="9">
       <Unit0>
@@ -18,8 +18,9 @@
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="500"/>
-        <CursorPos X="52" Y="511"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="523"/>
+        <CursorPos X="4" Y="543"/>
         <UsageCount Value="205"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -30,7 +31,7 @@
         <ComponentName Value="DM"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="1"/>
         <TopLine Value="92"/>
         <CursorPos X="12" Y="100"/>
         <UsageCount Value="204"/>
@@ -61,40 +62,35 @@
       </Unit4>
       <Unit5>
         <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\lazarus-ccr-svn\components\fpspreadsheet\source\common\fpspreadsheet.pas"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="975"/>
         <CursorPos Y="988"/>
         <UsageCount Value="14"/>
-        <Loaded Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\lazarus-ccr-svn\components\fpspreadsheet\source\visual\fpspreadsheetctrls.pas"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="44"/>
         <CursorPos X="3" Y="56"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit6>
       <Unit7>
         <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\lazarus-ccr-svn\components\fpspreadsheet\source\common\fpstypes.pas"/>
         <UnitName Value="fpsTypes"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="10"/>
         <CursorPos X="56" Y="22"/>
         <UsageCount Value="12"/>
-        <Loaded Value="True"/>
       </Unit7>
       <Unit8>
         <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\lazarus-ccr-svn\components\fpspreadsheet\source\visual\fpspreadsheetgrid.pas"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="161"/>
         <CursorPos X="30" Y="173"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
       </Unit8>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
         <Filename Value="mainunit.pas"/>
         <Caret Line="134" Column="69" TopLine="125"/>
@@ -184,38 +180,38 @@
         <Caret Line="122" Column="38" TopLine="101"/>
       </Position22>
       <Position23>
-        <Filename Value="..\..\..\..\usr\share\lazarus\1.8.0\components\lazarus-ccr-svn\components\fpspreadsheet\source\visual\fpspreadsheetgrid.pas"/>
-        <Caret Line="420" Column="46" TopLine="408"/>
-      </Position23>
-      <Position24>
         <Filename Value="dataunit.pas"/>
         <Caret Line="97" Column="34" TopLine="82"/>
+      </Position23>
+      <Position24>
+        <Filename Value="mainunit.pas"/>
+        <Caret Line="10" Column="62"/>
       </Position24>
       <Position25>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="10" Column="62"/>
+        <Caret Line="169" Column="14" TopLine="157"/>
       </Position25>
       <Position26>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="169" Column="14" TopLine="157"/>
+        <Caret Line="174" Column="8" TopLine="158"/>
       </Position26>
       <Position27>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="174" Column="8" TopLine="158"/>
+        <Caret Line="169" Column="7" TopLine="157"/>
       </Position27>
       <Position28>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="169" Column="7" TopLine="157"/>
+        <Caret Line="34" Column="23" TopLine="27"/>
       </Position28>
       <Position29>
         <Filename Value="mainunit.pas"/>
-        <Caret Line="34" Column="23" TopLine="27"/>
-      </Position29>
-      <Position30>
-        <Filename Value="mainunit.pas"/>
         <Caret Line="511" Column="52" TopLine="500"/>
-      </Position30>
+      </Position29>
     </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode="default"/>
+    </RunParams>
   </ProjectSession>
   <Debugging>
     <Watches Count="2">

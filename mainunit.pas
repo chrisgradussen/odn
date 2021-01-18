@@ -535,12 +535,12 @@ begin
  begin
    zoekstring :=  somzetgrid.Worksheet.FindCell(0,0)^.UTF8StringValue;
  end;
- if (pos('OPE1010 - Vestiging Omzet totaal->Datum',zoekstring)  = 1) then
+ if (pos('OPE1010 - Vestiging Omzet totaal->Datum',zoekstring)  = 1) or (pos('OPE1010 - Omzet totaal->Datum',zoekstring)  = 1) then
  begin
    leesomzetopdatum;
    exit;
  end;
- showmessage('na leesomzetopdatum, verder zoeken');
+ //showmessage('na leesomzetopdatum, verder zoeken');
    zoekstring := '' ;
   if assigned(somzetgrid.Worksheet.FindCell(1,13)) then
   begin
